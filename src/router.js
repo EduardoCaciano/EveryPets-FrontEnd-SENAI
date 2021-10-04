@@ -5,6 +5,7 @@ import HeaderCadastro from "./components/HeaderCadastro";
 import HeaderHome from "./components/HeaderHome"
 import Cadastrar from "./pages/Cadastrar";
 import CadastroProduto from "./pages/CadastroProduto";
+import CatalogoProdutos from "./pages/CatalogoProdutos";
 import Login from "./pages/Login";
 
 
@@ -15,7 +16,7 @@ function Router() {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
-                    <CadastroProduto />
+                    <CatalogoProdutos />
                 </Route>
             </Switch>
         </BrowserRouter>

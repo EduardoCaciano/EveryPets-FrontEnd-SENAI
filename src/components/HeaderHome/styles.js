@@ -128,7 +128,7 @@ export const Container = styled.header`
          margin-right: auto;
          margin-left: auto;
 
-         background-color: var(--primary);
+         background-color: var(--secundary);
         
          >.containerCardeInformacoes{
             height: 100px;

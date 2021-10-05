@@ -67,6 +67,12 @@ export const Container = styled.header`
       >img{
          height: 28px;
          float: right;
+
+         :hover{
+            box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
+            transform: scale(1.1); 
+            cursor: pointer;
+         }
       }
    }
    

@@ -8,7 +8,7 @@ export const ContainerCatalogo = styled.div`
     justify-content: center;
     margin-top: 258px;
 
-    >#CaixaFotoNome{
+    >#caixaFotoNome{
         height: 150px;
         width: 100vw;
         background-color: var(--primary);
@@ -17,9 +17,8 @@ export const ContainerCatalogo = styled.div`
 
         >#foto{
             height: initial;
-            width: 220px;
+            width: 100px;
             margin-left: 50px;
-            background-color: var(--primary);
 
             >img{
             height: 100px;
@@ -27,13 +26,14 @@ export const ContainerCatalogo = styled.div`
             border: 1.8px solid black;
             }
 
-            >h3{
+            >h2{
             height: initial;
             width: inherit;
             text-align: center;
             color: black;
             font-weight: initial;
-            text-align: left;
+            text-align: center;
+            font-size: 15px;
             }
 
             
@@ -41,8 +41,7 @@ export const ContainerCatalogo = styled.div`
 
         >div{
             height: initial;
-            width: 400px;
-            margin-left: 550px;
+            width: 100vw;
 
             >h1{
             height: initial;
@@ -50,7 +49,7 @@ export const ContainerCatalogo = styled.div`
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.3em black;
-            padding-right: 120px;
+            padding-right: 290px;
             }
             
             >h3{
@@ -59,11 +58,77 @@ export const ContainerCatalogo = styled.div`
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.2em black;
-            padding-right: 120px;
+            padding-right: 300px;
             font-weight: initial;
             }
         }
     }
+
+    >#servicos{
+        height: 70px;
+        width: 100vw;
+        align-items: center;
+        display: flex;
+
+        >#h1Servicos{
+            height: initial;
+            width: 54vw;
+
+            >h1{
+            text-align: right;
+            }
+        }
+        
+        >#h1Adicionar{
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+
+            >h3{
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            >img{
+            margin-left: 3px;
+            height: 28px;
+            border-radius: 100%;
+
+                :hover{
+                box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
+                transform: scale(1.1); 
+                cursor: pointer;
+                }
+            }
+        }    
+    }
+
+    >#caixaCards{
+        height: 230px;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        >.cards{
+            height: inherit;
+            width: 15.6%;
+            background-color: lime;
+
+            >.imagens{
+                height: 200px;
+                width: initial;
+                background-color: mediumblue;
+            }
+
+            >.nomeCard{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+    }
+
 
 `;
 

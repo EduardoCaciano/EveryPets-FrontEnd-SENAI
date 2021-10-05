@@ -5,6 +5,7 @@ import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import { ContainerCatalogo } from "./styles";
 import logo from "../../assents/profile.jpg"
+import mais from "../../assents/mais.png"
 
 function CatalogoProdutos() {
 
@@ -12,15 +13,48 @@ function CatalogoProdutos() {
         <>
             <HeaderHome />
             <ContainerCatalogo>
-                <div id="CaixaFotoNome">
-                <div id="foto">
-                    <img src={logo} />
-                    <h3>Trocar Foto</h3>
+                <div id="caixaFotoNome">
+
+                    <div id="foto">
+                        <img src={logo} />
+                        <h2 id="trocar">Trocar Foto</h2>
+                    </div>
+                    
+                        <div>
+                            <h1>EveryPets</h1>
+                            <h3>PetShop</h3>
+                        </div>    
                 </div>
-                    <div>
-                        <h1>Nome da Empresa</h1>
-                        <h3>Nome da Empresa</h3>
-                    </div>    
+            
+                <div id="servicos">
+                <div id="h1Servicos">
+                    <h1>Serviços</h1>
+                </div>    
+                <div id="h1Adicionar">
+                    <h3>Adicionar</h3>
+                    <img src={mais} />
+                </div>    
+            </div>
+
+                <div id="caixaCards">
+                    <div class="cards">
+                        <div class="imagens"></div>
+                        <div class="nomeCard">
+                            <h2>Consultas</h2>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="imagens"></div>
+                        <div class="nomeCard">
+                                <h2>Cirurgias</h2>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="imagens"></div>
+                        <div class="nomeCard">
+                            <h2>Banho e Tosa</h2>
+                        </div>
+                    </div>
                 </div>
             </ContainerCatalogo>
         </>

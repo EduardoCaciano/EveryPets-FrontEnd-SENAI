@@ -5,7 +5,12 @@ import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import { ContainerCatalogo } from "./styles";
 import logo from "../../assents/profile.jpg"
+import edit from "../../assents/edit.jpg"
+import lixo from "../../assents/lixo.jpg"
 import mais from "../../assents/mais.png"
+import consulta from "../../assents/consulta.jpg"
+import cirurgia from "../../assents/cirurgia.jpg"
+import banhoeTosa from "../../assents/banhoeTosa.png"
 
 function CatalogoProdutos() {
 
@@ -27,34 +32,95 @@ function CatalogoProdutos() {
                 </div>
             
                 <div id="servicos">
-                <div id="h1Servicos">
-                    <h1>Serviços</h1>
-                </div>    
-                <div id="h1Adicionar">
+                    <h1>Serviços</h1> 
+                </div>
+
+                <div id="adicionar">
                     <h3>Adicionar</h3>
                     <img src={mais} />
-                </div>    
-            </div>
+                </div>
 
-                <div id="caixaCards">
+                <div id="cardServicos">
                     <div class="cards">
-                        <div class="imagens"></div>
+                        <div class="imagens">
+                            <div class="opcoes">
+                                <img src={edit} />
+                            </div>
+                            <div class="fotoCard">
+                                <img src={consulta} />
+                            </div>
+                            <div class="opcoes">
+                                <img src={lixo} />
+                            </div>
+                        </div>
                         <div class="nomeCard">
                             <h2>Consultas</h2>
                         </div>
                     </div>
+
                     <div class="cards">
-                        <div class="imagens"></div>
+                        <div class="imagens">
+                            <div class="opcoes">
+                                <img src={edit} />
+                            </div>
+                            <div class="fotoCard">
+                                <img src={cirurgia} />
+                            </div>
+                            <div class="opcoes">
+                                <img src={lixo} />
+                            </div>
+                        </div>
                         <div class="nomeCard">
                                 <h2>Cirurgias</h2>
                         </div>
                     </div>
+
                     <div class="cards">
-                        <div class="imagens"></div>
+                        <div class="imagens">
+                            <div class="opcoes">
+                                <img src={edit} />
+                            </div>
+                            <div class="fotoCard">
+                                <img src={banhoeTosa} />
+                            </div>
+                            <div class="opcoes">
+                                <img src={lixo} />
+                            </div>
+                        </div>
                         <div class="nomeCard">
                             <h2>Banho e Tosa</h2>
                         </div>
                     </div>
+                </div>
+            
+                <div id="cirurgias">
+                    <h1>Cirurgias</h1>
+                </div>
+            
+                <div id="cardsCirurgias">
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+                    <div id="cardsProdutos"></div>
+
+
+
                 </div>
             </ContainerCatalogo>
         </>

@@ -7,6 +7,10 @@ export const ContainerCatalogo = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 258px;
+    *{margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     >#caixaFotoNome{
         height: 150px;
@@ -70,24 +74,20 @@ export const ContainerCatalogo = styled.div`
         align-items: center;
         display: flex;
 
-        >#h1Servicos{
-            height: initial;
-            width: 54vw;
-
-            >h1{
-            text-align: right;
-            }
+        >h1{
+            width: 100vw;
+            text-align: center;
         }
-        
-        >#h1Adicionar{
-            display: flex;
-            align-items: center;
-            margin-right: auto;
-            margin-left: auto;
+    }
+
+    >#adicionar{
+        width: 100vw;
+        height: 50px;
+        display: flex;
+        align-items: center;
 
             >h3{
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 105px;
             }
 
             >img{
@@ -101,31 +101,92 @@ export const ContainerCatalogo = styled.div`
                 cursor: pointer;
                 }
             }
-        }    
     }
 
-    >#caixaCards{
+    >#cardServicos{
         height: 230px;
         width: 100vw;
         display: flex;
         align-items: center;
+        margin-top: 25px;
         justify-content: space-around;
 
         >.cards{
             height: inherit;
             width: 15.6%;
-            background-color: lime;
 
             >.imagens{
                 height: 200px;
                 width: initial;
-                background-color: mediumblue;
+                display: flex;
+
+                >.opcoes{
+                    height: 23%;
+                    width: 20%;
+
+                    >img{
+                        height: 100%;
+                        width: 100%;
+
+                        :hover{
+                        transform: scale(1.1); 
+                        cursor: pointer;
+                        }
+                    }
+                }
+
+                >.fotoCard{
+                    height: 100%;
+                    width: 80%;
+
+                    >img{
+                        height: 100%;
+                        width: 100%;  
+                        border-radius: 100%;
+                    }
+                }
             }
 
             >.nomeCard{
                 text-align: center;
-                font-family: Arial, Helvetica, sans-serif;
             }
+        }
+    }
+
+    >#cirurgias{
+        height: 100px;
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        background-color: var(--primary);
+        margin-top: 25px;
+
+        >h1{
+            height: initial;
+            width: 100%;
+            text-align: center;
+            text-shadow: 0.1em 0.2em 0.4em black;
+            color: white;
+        }
+    }
+
+    >#cardsCirurgias{
+        height: initial;
+        width: 85vw;
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: blanchedalmond;
+        margin-left: auto;
+        margin-right: auto;
+
+        >#cardsProdutos{
+            margin-top: 25px;
+            width: 280px;
+            height: 320px;
+            background-color: indianred;
         }
     }
 

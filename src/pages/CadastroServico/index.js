@@ -44,7 +44,7 @@ function Cadastrar() {
         <>
             <HeaderHome />
             <ContainerCadastro>
-                <h1>Cadastre seu produto</h1>
+                <h1>Cadastre seus serviços</h1>
                 
                 <div id="containerGatinho">
                     <img src={logo} />
@@ -52,12 +52,7 @@ function Cadastrar() {
 
                 <FormContainer onSubmit={handleSubmit}>
                     <Input label="Tipo de Serviços" id="servico" handler={handleInput} required />
-                    <Input label="Nome do Produto" id="produto" handler={handleInput} required />
-                    <Input label="Tamanho" id="tamanho" handler={handleInput} required />
-                    <Input label="Quantidade" id="quantidade" handler={handleInput} required />
-                    <Input label="Valor" id="valor" handler={handleInput} required />
-                    <Input label="Cor" id="cor" handler={handleInput} required />
-                    <Input label="Descrição" id="descricao" handler={handleInput} required />
+                    
                     
                     <div id="arquivos">
                         <div id="caixaImagem">

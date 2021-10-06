@@ -5,12 +5,13 @@ import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import { ContainerCatalogo } from "./styles";
 import logo from "../../assents/profile.jpg"
-import edit from "../../assents/edit.jpg"
-import lixo from "../../assents/lixo.jpg"
+import editar from "../../assents/editar.png"
+import lixo from "../../assents/lixo.png"
 import mais from "../../assents/mais.png"
 import consulta from "../../assents/consulta.jpg"
 import cirurgia from "../../assents/cirurgia.jpg"
 import banhoeTosa from "../../assents/banhoeTosa.png"
+import CardCirurgia from "../../components/CardCirurgia";
 
 function CatalogoProdutos() {
 
@@ -44,7 +45,7 @@ function CatalogoProdutos() {
                     <div class="cards">
                         <div class="imagens">
                             <div class="opcoes">
-                                <img src={edit} />
+                                <img src={editar} />
                             </div>
                             <div class="fotoCard">
                                 <img src={consulta} />
@@ -61,7 +62,7 @@ function CatalogoProdutos() {
                     <div class="cards">
                         <div class="imagens">
                             <div class="opcoes">
-                                <img src={edit} />
+                                <img src={editar} />
                             </div>
                             <div class="fotoCard">
                                 <img src={cirurgia} />
@@ -78,7 +79,7 @@ function CatalogoProdutos() {
                     <div class="cards">
                         <div class="imagens">
                             <div class="opcoes">
-                                <img src={edit} />
+                                <img src={editar} />
                             </div>
                             <div class="fotoCard">
                                 <img src={banhoeTosa} />
@@ -98,29 +99,48 @@ function CatalogoProdutos() {
                 </div>
             
                 <div id="cardsCirurgias">
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-                    <div id="cardsProdutos"></div>
-
-
-
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
+                    <CardCirurgia/>
                 </div>
             </ContainerCatalogo>
         </>

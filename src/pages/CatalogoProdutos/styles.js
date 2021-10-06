@@ -14,9 +14,11 @@ export const ContainerCatalogo = styled.div`
 
     >#caixaFotoNome{
         height: 150px;
-        width: 100vw;
+        width: 80vw;
         background-color: var(--primary);
         align-items: center;
+        margin-right: auto;
+        margin-left: auto;
         display: flex;
 
         >#foto{
@@ -39,8 +41,6 @@ export const ContainerCatalogo = styled.div`
             text-align: center;
             font-size: 15px;
             }
-
-            
         }
 
         >div{
@@ -53,7 +53,7 @@ export const ContainerCatalogo = styled.div`
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.3em black;
-            padding-right: 290px;
+            padding-right: 700px;
             }
             
             >h3{
@@ -62,7 +62,7 @@ export const ContainerCatalogo = styled.div`
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.2em black;
-            padding-right: 300px;
+            padding-right: 700px;
             font-weight: initial;
             }
         }
@@ -70,9 +70,11 @@ export const ContainerCatalogo = styled.div`
 
     >#servicos{
         height: 70px;
-        width: 100vw;
+        width: 90vw;
         align-items: center;
         display: flex;
+        margin-right: auto;
+        margin-left: auto;
 
         >h1{
             width: 100vw;
@@ -81,14 +83,12 @@ export const ContainerCatalogo = styled.div`
     }
 
     >#adicionar{
-        width: 100vw;
+        width: 80vw;
         height: 50px;
         display: flex;
         align-items: center;
-
-            >h3{
-            margin-left: 105px;
-            }
+        margin-right: auto;
+        margin-left: auto;
 
             >img{
             margin-left: 3px;
@@ -104,19 +104,21 @@ export const ContainerCatalogo = styled.div`
     }
 
     >#cardServicos{
-        height: 230px;
-        width: 100vw;
+        height: 190px;
+        width: 80vw;
         display: flex;
         align-items: center;
         margin-top: 25px;
         justify-content: space-around;
+        margin-left: auto;
+        margin-right: auto;
 
         >.cards{
             height: inherit;
             width: 15.6%;
 
             >.imagens{
-                height: 200px;
+                height: 150px;
                 width: initial;
                 display: flex;
 
@@ -155,11 +157,13 @@ export const ContainerCatalogo = styled.div`
 
     >#cirurgias{
         height: 100px;
-        width: 100vw;
+        width: 80vw;
         align-items: center;
         display: flex;
         background-color: var(--primary);
         margin-top: 25px;
+        margin-right: auto;
+        margin-left: auto;
 
         >h1{
             height: initial;
@@ -172,22 +176,14 @@ export const ContainerCatalogo = styled.div`
 
     >#cardsCirurgias{
         height: initial;
-        width: 85vw;
+        width: 80vw;
         display: flex;
         flex-direction: row;
         margin-top: 25px;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        background-color: blanchedalmond;
         margin-left: auto;
         margin-right: auto;
-
-        >#cardsProdutos{
-            margin-top: 25px;
-            width: 280px;
-            height: 320px;
-            background-color: indianred;
-        }
     }
 
 

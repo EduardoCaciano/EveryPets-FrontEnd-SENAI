@@ -118,15 +118,22 @@ export const Container = styled.header`
          }
       }
    }
-   >#InformacoesParciais{
-      width: inherit;
+
+   >#caixaInformacoesParciais{
+      width: 100vw;
+      height: 160px;
+      background-color: var(--secundary);
+
+      >#InformacoesParciais{
+      width: 80vw;
       height: 160px;
       justify-content: center;
       display: flex;
       align-items: center;
+      margin-right: auto;
+      margin-left: auto;
       margin-top: 15px;
 
-      background-color: black;
       >div{
          align-items: center;
          height: inherit;
@@ -140,7 +147,7 @@ export const Container = styled.header`
             height: 100px;
             width: 100px;
             margin-top: 13px;
-            border-radius: 100vh;
+            border-radius: 100%;
             margin-right: auto;
             margin-left: auto;
             justify-content: center;
@@ -167,8 +174,10 @@ export const Container = styled.header`
             color: white;
          }
       }
-        
    }
+
+   }
+   
      
    
    

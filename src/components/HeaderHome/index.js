@@ -1,4 +1,4 @@
-import { Container,  } from "./styles";
+import { Container, } from "./styles";
 import logo from "../../assents/logo2.png"
 import botaoSair from "../../assents/botaoSair.png"
 import profile from "../../assents/profile.jpg";
@@ -32,36 +32,40 @@ function Header() {
                     <p>Atendimentos</p>
                 </div>
             </nav>
-            <nav id="InformacoesParciais">
-                
-                <div>
-                    <div class="containerCardeInformacoes">
-                        <p>90</p>
-                    </div>
-                    <p>Atendimentos hoje</p>
-                </div>
 
-                <div>
-                    <div class="containerCardeInformacoes">
-                        <p>90</p>
-                    </div>
-                    <p>Atendimentos amanhã</p>
-                </div>
+            <div id="caixaInformacoesParciais">
+                <nav id="InformacoesParciais">
 
-                <div>
-                    <div class="containerCardeInformacoes">
-                        <p>90</p>
+                    <div>
+                        <div class="containerCardeInformacoes">
+                            <p>90</p>
+                        </div>
+                        <p>Atendimentos hoje</p>
                     </div>
-                    <p>Mensagens</p>
-                </div>
 
-                <div>
-                    <div class="containerCardeInformacoes">
-                        <p>90</p>
+                    <div>
+                        <div class="containerCardeInformacoes">
+                            <p>90</p>
+                        </div>
+                        <p>Atendimentos amanhã</p>
                     </div>
-                    <p>Mensagens</p>
-                </div>
-            </nav>
+
+                    <div>
+                        <div class="containerCardeInformacoes">
+                            <p>90</p>
+                        </div>
+                        <p>Mensagens</p>
+                    </div>
+
+                    <div>
+                        <div class="containerCardeInformacoes">
+                            <p>90</p>
+                        </div>
+                        <p>Mensagens</p>
+                    </div>
+                </nav>
+            </div>
+
         </Container>
 
     );

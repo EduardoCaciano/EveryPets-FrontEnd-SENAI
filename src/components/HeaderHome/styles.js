@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-   width : 100vw;
+   width : 100%;
    height: 55px;
    top: 0;
 
@@ -13,7 +13,7 @@ export const Container = styled.header`
   >nav{
      height: inherit;
      position: static;
-     width: 98vw;
+     width: 100%;
      background-color: var(--primary);
      display: flex;
 
@@ -61,7 +61,7 @@ export const Container = styled.header`
    }
 
    >#sair{
-      width: 99vw;
+      width: 100%;
       padding-top: 5px;
 
       >img{
@@ -78,7 +78,7 @@ export const Container = styled.header`
    
    >#headerCardes{
       height: 50px;
-      width: inherit;
+      width: 100%;
       display: flex;
       background-color: white;
       align-items: center;
@@ -120,12 +120,12 @@ export const Container = styled.header`
    }
 
    >#caixaInformacoesParciais{
-      width: 100vw;
+      width: 100%;
       height: 160px;
       background-color: var(--secundary);
 
       >#InformacoesParciais{
-      width: 80vw;
+      width: 80%;
       height: 160px;
       justify-content: center;
       display: flex;

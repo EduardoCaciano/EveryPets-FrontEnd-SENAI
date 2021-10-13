@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const ContainerCatalogo = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,7 @@ export const ContainerCatalogo = styled.div`
 
     >#caixaFotoNome{
         height: 150px;
-        width: 80vw;
+        width: 80%;
         background-color: var(--primary);
         align-items: center;
         margin-right: auto;
@@ -40,37 +40,47 @@ export const ContainerCatalogo = styled.div`
             font-weight: initial;
             text-align: center;
             font-size: 15px;
+            
+                 :hover{
+                        transform: scale(1.1); 
+                        cursor: pointer;
+                        }
             }
         }
 
         >div{
             height: initial;
-            width: 100vw;
+            width: 100%;
+            align-items: center;
+            display: grid;
+            margin-right: -150px;
 
             >h1{
             height: initial;
-            width: inherit;
+            width: 90%;
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.3em black;
-            padding-right: 700px;
+            margin-left: auto;
+            margin-right: auto;
             }
             
             >h3{
             height: initial;
-            width: inherit;
+            width: 90%;
             text-align: center;
             color: white;
             text-shadow: 0.1em 0.2em 0.2em black;
-            padding-right: 700px;
             font-weight: initial;
+            margin-left: auto;
+            margin-right: auto;
             }
         }
     }
 
     >#servicos{
         height: 70px;
-        width: 90vw;
+        width: 90%;
         align-items: center;
         display: flex;
         margin-right: auto;
@@ -83,7 +93,7 @@ export const ContainerCatalogo = styled.div`
     }
 
     >#adicionar{
-        width: 80vw;
+        width: 80%;
         height: 50px;
         display: flex;
         align-items: center;
@@ -105,7 +115,7 @@ export const ContainerCatalogo = styled.div`
 
     >#cardServicos{
         height: 190px;
-        width: 80vw;
+        width: 80%;
         display: flex;
         align-items: center;
         margin-top: 25px;
@@ -157,7 +167,7 @@ export const ContainerCatalogo = styled.div`
 
     >#cirurgias{
         height: 100px;
-        width: 80vw;
+        width: 80%;
         align-items: center;
         display: flex;
         background-color: var(--primary);
@@ -176,14 +186,15 @@ export const ContainerCatalogo = styled.div`
 
     >#cardsCirurgias{
         height: initial;
-        width: 80vw;
+        width: 80%;
         display: flex;
         flex-direction: row;
         margin-top: 25px;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: left;
         margin-left: auto;
         margin-right: auto;
+        /* background-color: black; */
     }
 
 

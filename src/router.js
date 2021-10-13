@@ -7,6 +7,7 @@ import Cadastrar from "./pages/Cadastrar";
 import CadastroProduto from "./pages/CadastroProduto";
 import CadastroServico from "./pages/CadastroServico";
 import CatalogoProdutos from "./pages/CatalogoProdutos";
+import Solicitacoes from "./pages/Solicitacoes";
 import Login from "./pages/Login";
 
 
@@ -17,22 +18,27 @@ function Router() {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
-                    <CatalogoProdutos />
-                </Route>
-                
-                <Route exact path="/Login">
                     <Login />
                 </Route>
                 
-                <Route exact path="/CadastroProduto">
+                <Route exact path="/Catalogo">
+                    <CatalogoProdutos />
+                </Route>
+                
+                <Route exact path="/CadastroP">
                     <CadastroProduto />
                 </Route>
+
                 <Route exact path="/Cadastrar">
                     <Cadastrar />
                 </Route>
                 
-                <Route exact path="/CadastroServico">
+                <Route exact path="/CadastroS">
                     <CadastroServico />
+                </Route>
+
+                <Route exact path="/Solicitacoes">
+                    <Solicitacoes />
                 </Route>
 
             </Switch>

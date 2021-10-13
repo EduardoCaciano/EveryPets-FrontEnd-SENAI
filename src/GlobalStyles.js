@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     :root{
         --primary: #D28224;
         --secundary: #D9A467;
+        --tertiary: #E0AB6C;
         --textPrimary: #000000;
     }
 

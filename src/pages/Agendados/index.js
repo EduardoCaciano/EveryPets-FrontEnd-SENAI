@@ -1,7 +1,5 @@
 import CardAtendimento from "../../components/CardAtendimento";
-import HeaderCadastro from "../../components/HeaderCadastro";
 import HeaderHome from "../../components/HeaderHome";
-import Input from "../../components/InputSolicitacoes";
 import { ContainerSolicitacoes } from "./styles";
 
 

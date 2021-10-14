@@ -8,6 +8,7 @@ import CadastroProduto from "./pages/CadastroProduto";
 import CadastroServico from "./pages/CadastroServico";
 import CatalogoProdutos from "./pages/CatalogoProdutos";
 import Solicitacoes from "./pages/Solicitacoes";
+import Agendados from "./pages/Agendados";
 import Login from "./pages/Login";
 
 
@@ -39,6 +40,10 @@ function Router() {
 
                 <Route exact path="/Solicitacoes">
                     <Solicitacoes />
+                </Route>
+                
+                <Route exact path="/Agendados">
+                    <Agendados />
                 </Route>
 
             </Switch>

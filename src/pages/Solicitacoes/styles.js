@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerSolicitacoes = styled.header`
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     align-items: center;
     display: grid;

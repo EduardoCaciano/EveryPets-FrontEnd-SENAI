@@ -9,19 +9,25 @@ function Cadastrar() {
         <>
             <HeaderHome />
             <ContainerSolicitacoes>
-                <h1>Solicitações de atendimentos</h1>
+                <h1>Atendimentos hoje</h1>
+                <h3>14/10/2021</h3>
+
+                <div id="containerCachorro">
+                </div>
 
                 <nav>
                     <CardAtendimento />
                     <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
-                    <CardAtendimento />
+
+                </nav>
+
+                <h1>Atendimentos Amanhã</h1>
+                <h3>15/10/2021</h3>
+
+                <div id="containerGatinho">
+                </div>
+
+                <nav>
                     <CardAtendimento />
                     <CardAtendimento />
                 </nav>

@@ -82,7 +82,6 @@ export const FormContainer = styled.form`
     >#botoes{
         width: initial;
         height: inherit;
-        /* background-color: black; */
         margin-top: 15px;
         display: flex;
         align-items: center;

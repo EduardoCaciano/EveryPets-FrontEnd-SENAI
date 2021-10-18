@@ -1,6 +1,6 @@
-import CardAtendimento from "../../components/CardAtendimento";
+import CardAgendamento from "../../components/CardAgendamentos";
 import HeaderHome from "../../components/HeaderHome";
-import { ContainerSolicitacoes } from "./styles";
+import { ContainerAgendados } from "./styles";
 
 
 function Cadastrar() {
@@ -8,7 +8,7 @@ function Cadastrar() {
     return (
         <>
             <HeaderHome />
-            <ContainerSolicitacoes>
+            <ContainerAgendados>
                 <h1>Atendimentos hoje</h1>
                 <h3>14/10/2021</h3>
 
@@ -16,8 +16,8 @@ function Cadastrar() {
                 </div>
 
                 <nav>
-                    <CardAtendimento />
-                    <CardAtendimento />
+                    <CardAgendamento />
+                    <CardAgendamento />
 
                 </nav>
 
@@ -28,12 +28,12 @@ function Cadastrar() {
                 </div>
 
                 <nav>
-                    <CardAtendimento />
-                    <CardAtendimento />
+                    <CardAgendamento />
+                    <CardAgendamento />
                 </nav>
 
                 
-            </ContainerSolicitacoes>
+            </ContainerAgendados>
         </>
     );
 }

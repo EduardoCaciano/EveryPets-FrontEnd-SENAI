@@ -3,6 +3,7 @@ import HeaderLogin from "../src/components/Header";
 import Header from "../src/components/Header"
 import HeaderCadastro from "./components/HeaderCadastro";
 import HeaderHome from "./components/HeaderHome"
+import Footer from "./components/Footer"
 import Cadastrar from "./pages/Cadastrar";
 import CadastroProduto from "./pages/CadastroProduto";
 import CadastroServico from "./pages/CadastroServico";
@@ -44,6 +45,10 @@ function Router() {
                 
                 <Route exact path="/Agendados">
                     <Agendados />
+                </Route>
+                
+                <Route exact path="/Footer">
+                    <Footer />
                 </Route>
 
             </Switch>

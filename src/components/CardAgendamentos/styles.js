@@ -54,13 +54,72 @@ export const Cards = styled.header`
                          margin-left: auto;
                          margin-top: -8px;
                         }
-                    
-                        >#dadosAnimalHeader{
+
+                        >#caixaDadosAnimalBotoes{
                             height: 50px;
                             width: 96%;
                             margin-left: 25px;
                             margin-right: 25px;
+                            display: flex;
+
+
+                            >#dadosAnimalHeader{
+                            height: 50px;
+                            width: 50%;
+                            }
+
+                            >#botoes{
+                                width: 50%;
+                                height: inherit;
+                                display: flex;
+                                align-items: center;
+                                float: left;
+
+                                >button {
+                                width: 28%;
+                                height: initial;
+                                border-radius: 30px;
+                                border-color: #1ACC2B;
+                                background-color: #1ACC2B;
+                                color: white;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 12px;
+                                display:block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                }
+
+                                >#reagendar{
+                                    width: 28%;
+                                    height: initial;
+                                    border-radius: 30px;
+                                    border-color: #D9AD36;
+                                    background-color: #D9AD36;
+                                    color: white;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 12px;
+                                    display:block;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                }
+
+                                >#cancelar {
+                                width: 28%;
+                                height: initial;
+                                border-radius: 30px;
+                                border-color: #E24513;
+                                background-color: #E24513;
+                                color: white;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 12px;
+                                display:block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                }
+                            }
                         }
+                    
+
             
             
                     }
@@ -88,6 +147,8 @@ export const Cards = styled.header`
                             height: 90%;
                             width: 50%;
                             margin-left: 15px;
+
+                            
                         }
 
                         >#campoConfirmacao{
@@ -96,42 +157,7 @@ export const Cards = styled.header`
                             text-align: center;
                             align-items: center;
 
-                            >#botoes{
-                            width: 100%;
-                            height: inherit;
-                            /* background-color: black; */
-                            display: flex;
-                            align-items: center;
-                            margin-top: -26px;
-
-                            >button {
-                            width: 38%;
-                            height: initial;
-                            border-radius: 30px;
-                            border-color: #1ACC2B;
-                            background-color: #1ACC2B;
-                            color: white;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: 12px;
-                            display:block;
-                            margin-left: auto;
-                            margin-right: auto;
-                            }
-
-                            >#cancelar {
-                            width: 38%;
-                            height: initial;
-                            border-radius: 30px;
-                            border-color: #E24513;
-                            background-color: #E24513;
-                            color: white;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: 12px;
-                            display:block;
-                            margin-left: auto;
-                            margin-right: auto;
-                            }
-                        }
+                            
 
              
     }

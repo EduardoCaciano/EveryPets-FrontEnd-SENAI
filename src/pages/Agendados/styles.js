@@ -2,9 +2,9 @@ import styled from "styled-components";
 import cachorro from "../../assents/cachorro.png"
 import gatinho from "../../assents/gatoCadastro.png"
 
-export const ContainerSolicitacoes = styled.header`
+export const ContainerAgendados = styled.header`
     width: 100%;
-    height: 50vh;
+    height: initial;
     align-items: center;
     display: grid;
     justify-content: center;
@@ -65,5 +65,7 @@ export const ContainerSolicitacoes = styled.header`
             display: grid;
             justify-content: center;
             background-color: var(--secundary);
+            margin-left: auto;
+            margin-right: auto;
         }
 `;

@@ -5,6 +5,7 @@ import { signIn } from "../../services/security";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
+import Footer from "../../components/Footer";
 
 function Login() {
 

@@ -1,15 +1,19 @@
-import { Container, IconSignOut } from "./styles";
-import logo from "../../assents/logo2.png"
-import OpcoesHeader from "../OpcoesHeader";
-
+import { ContainerFooter } from "./styles";
 
 function Footer() {
 
     return (
-        <Footer>
-            <img src={logo} />
-            <OpcoesHeader/>
-        </Footer>
+        <ContainerFooter>
+            <footer>
+                <div id="fantasma" /> 
+
+                <h3>
+                    © Copyright / 2021 • Every Pets • Todos os direitos reservados
+                </h3>
+
+                <div id="imagem" />
+            </footer>
+        </ContainerFooter>
     );
 }
 

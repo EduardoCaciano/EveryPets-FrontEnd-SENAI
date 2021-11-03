@@ -11,6 +11,9 @@ import CatalogoProdutos from "./pages/CatalogoProdutos";
 import Solicitacoes from "./pages/Solicitacoes";
 import Agendados from "./pages/Agendados";
 import Login from "./pages/Login";
+import ConfColaborador from "./pages/ConfirmacaoColaborador";
+import CadastroColaborador from "./pages/CadastroColaborador";
+import CadastroFinalizado from "./pages/CadastroFinalizado";
 
 
 function Router() {
@@ -50,6 +53,19 @@ function Router() {
                 <Route exact path="/Footer">
                     <Footer />
                 </Route>
+                
+                <Route exact path="/ConfColaborador">
+                    <ConfColaborador />
+                </Route>
+                
+                <Route exact path="/CadastroColaborador">
+                    <CadastroColaborador />
+                </Route>
+                
+                <Route exact path="/CadastroFinalizado">
+                    <CadastroFinalizado />
+                </Route>
+
 
             </Switch>
         </BrowserRouter>

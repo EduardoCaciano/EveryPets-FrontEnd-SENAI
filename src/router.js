@@ -13,7 +13,7 @@ import Agendados from "./pages/Agendados";
 import Login from "./pages/Login";
 import ConfColaborador from "./pages/ConfirmacaoColaborador";
 import CadastroColaborador from "./pages/CadastroColaborador";
-import CadastroFinalizado from "./pages/CadastroFinalizado";
+import EscolhaSegmento from "./pages/EscolhaSegmentos";
 
 
 function Router() {
@@ -61,11 +61,10 @@ function Router() {
                 <Route exact path="/CadastroColaborador">
                     <CadastroColaborador />
                 </Route>
-                
-                <Route exact path="/CadastroFinalizado">
-                    <CadastroFinalizado />
-                </Route>
 
+                <Route exact path="/EscolhaSegmento">
+                    <EscolhaSegmento />
+                </Route>
 
             </Switch>
         </BrowserRouter>

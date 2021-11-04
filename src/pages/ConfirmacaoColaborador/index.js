@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeaderCadastro from "../../components/HeaderCadastro";
 import { ContainerPrimary } from "./styles";
 
@@ -21,6 +22,7 @@ function Cadastrar() {
                     <div id="botoes">
                         <button>Sim</button>
                         <button id="nao">Não</button>
+                        
                     </div>
                 </main>
 

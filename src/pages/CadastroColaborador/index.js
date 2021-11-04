@@ -54,6 +54,7 @@ function Cadastrar() {
                         <NomesColaboradores />
                         <NomesColaboradores />
                         <NomesColaboradores />
+                        <NomesColaboradores />
                     </nav>
                     <Input label="Nome" id="nome" handler={handleInput} required />
                     <Input label="Email" id="email" handler={handleInput} required />

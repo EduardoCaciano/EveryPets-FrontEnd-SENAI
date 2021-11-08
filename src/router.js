@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import ConfColaborador from "./pages/ConfirmacaoColaborador";
 import CadastroColaborador from "./pages/CadastroColaborador";
 import EscolhaSegmento from "./pages/EscolhaSegmentos";
+import Home from "./pages/Home";
 
 
 function Router() {
@@ -22,7 +23,12 @@ function Router() {
         <>
         <BrowserRouter>
             <Switch>
-                <Route exact path="/">
+
+                <Route exact path="/Home">
+                    <Home />
+                </Route>
+
+                <Route exact path="/Login">
                     <Login />
                 </Route>
                 

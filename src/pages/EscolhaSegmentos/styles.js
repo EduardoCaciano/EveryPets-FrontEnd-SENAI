@@ -1,83 +1,96 @@
 import styled from "styled-components";
-import imgDog from "../../assents/segmento.png";
+import imgDog from "../../assents/segmento.jpg";
 import petshop from "../../assents/petshop.png";
-import veterinario from "../../assents/veterinario.png";
-
+import veterinario from "../../assents/veterinario.jpg";
 
 export const ContainerPrimary = styled.header`
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 80vh;
     align-items: center;
     justify-content: center;
     display: grid;
+    margin-top: 70px;
     
 
         #containerTitulo{
-            width: inherit;
+            width: 500px;
             height: 146px;
             display: block;
             align-items: center;
             justify-content: center;
             background-image: url(${imgDog});
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             margin-right: auto;
             margin-left: auto;
-            margin-top: 70px;
+            margin-top: 120px;
         }
 
         >main{
             height: 300px;
-            width: 60%;
+            width: 900px;
             border-radius: 20px;
-            display: flow-root;
+            display: flex;
             border-radius: 20px;
-            background-color: lightsalmon;
             margin-left: auto;
             margin-right: auto;
 
             >#petshop{
-                width: 45%;
+                width: 40%;
                 height: 100%;
-                background-color: lime;
-                float: left;
+                background-color: var(--tertiary);
                 display: grid;
                 border-radius: 20px;
+                    :hover{
+                            box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
+                            transform: scale(1.1); 
+                            cursor: pointer;
+                        }
 
 
                 >#titulo{
                     width: initial;
                     height: 30%;
-                    background-color: red;
                     align-items: center;
                     justify-content: center;
                     display: flex;
                     border-radius: 20px 20px 0px 0px;
                     background-color: var(--primary);
-
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
                 }
 
                 >#imagem{
-                    width: inherit;
+                    width: 100%;
                     height: inherit;
                     background-image: url(${petshop});
                     background-repeat: no-repeat;
                     background-size: contain;
                     background-position: center;
                     background-position: bottom;
-                    background-color: khaki;
-
+                    margin-top: -18%;
                 }
             }
-            
+
+            >#fantasma{
+                height: 300px;
+                width: 20%;
+            }
+
             >#veterinario{
-                width: 45%;
-                height: inherit;
-                background-color: pink;
+                width: 40%;
+                height: 100%;
+                background-color: var(--tertiary);
                 display: grid;
-                float: right;
                 border-radius: 20px;
+                    :hover{
+                        box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
+                        transform: scale(1.1); 
+                        cursor: pointer;
+                    }
+
+
 
                 >#titulo{
                     width: initial;
@@ -88,20 +101,24 @@ export const ContainerPrimary = styled.header`
                     display: flex;
                     border-radius: 20px 20px 0px 0px;
                     background-color: var(--primary);
+                    color: white;
                 }
 
                 >#imagem{
-                    width: inherit;
+                    width: 100%;
                     height: inherit;
                     background-image: url(${veterinario});
                     background-repeat: no-repeat;
-                    background-size: contain;
+                    background-size: cover;
                     background-position: center;
                     background-position: bottom;
-                    background-color: khaki;
-
+                    background-color: var(--tertiary);
+                    margin-top: -18%;
                 }
-                
             }
+
+
         }
+
+
 `;

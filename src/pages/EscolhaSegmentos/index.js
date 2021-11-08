@@ -18,9 +18,11 @@ function Cadastrar() {
                         <div id="imagem"/>
                     </div>
 
+                    <div id="fantasma"></div>
+
                     <div id="veterinario">
                         <div id="titulo">
-                            <h1>Sou veterinário</h1>
+                            <h1>Sou veterinárioª</h1>
                         </div>
 
                         <div id="imagem"/>

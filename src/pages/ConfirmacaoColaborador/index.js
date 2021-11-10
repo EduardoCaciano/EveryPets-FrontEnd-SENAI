@@ -20,8 +20,8 @@ function Cadastrar() {
                     </div>
 
                     <div id="botoes">
-                        <button>Sim</button>
-                        <button id="nao">Não</button>
+                    <Link to="/CadastroColaborador"><button>Sim</button></Link>
+                        <Link to="/Catalogo"><button id="nao">Não</button></Link>
                         
                     </div>
                 </main>

@@ -9,20 +9,27 @@ export const Paginas = styled.header`
    display: flex;
    align-items: center;
    justify-content: space-between;
+        
+   >a{
+            width : initial;
+            height: initial;
+            text-decoration: none;
+            
+            >h1{
+            font-size: 20px;
+            color: white;
+            flex: auto;
+            align-items: center;
+            padding-left: 30px;
+            text-decoration: none;
+            }  
 
-    >h1{
-        font-size: 20px;
-        color: white;
-        flex: auto;
-        align-items: center;
-        padding-left: 30px;
-        text-decoration: none;
-    }  
-
-    >h1:hover{
-        transform: scale(1.1);
-        transition: .2s;
-    }
+            >h1:hover{
+                transform: scale(1.1);
+                transition: .2s;
+            }
+        }
+    
 `;
 
 export const Acessos = styled.header`
@@ -33,25 +40,32 @@ export const Acessos = styled.header`
    align-items: center;
    justify-content: space-between;
 
-   >h2{
-       height: inherit;
-        font-size: 18px;
-        color: white;
-        flex: auto;
-        align-items: center;
-        padding-left: 30px;
-    }
+   >a{
+        width : initial;
+        height: initial;
+        text-decoration: none;
 
-    >h2:hover{
-        transform: scale(1.1);
-        transition: .2s;
+        >h2{
+            height: inherit;
+                font-size: 18px;
+                color: white;
+                flex: auto;
+                align-items: center;
+                padding-left: 30px;
+            }
+
+            >h2:hover{
+                transform: scale(1.1);
+                transition: .2s;
+            }
+        
+            >h3{
+                font-size: 18px;
+                color: black;
+                flex: auto;
+                align-items: center;
+                padding-left: 30px;
+            } 
+
     }
-   
-    >h3{
-        font-size: 18px;
-        color: black;
-        flex: auto;
-        align-items: center;
-        padding-left: 30px;
-    } 
 `;

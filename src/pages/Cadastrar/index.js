@@ -7,6 +7,8 @@ import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
+
 
 function Cadastrar() {
 
@@ -85,8 +87,8 @@ function Cadastrar() {
                     <Input label="Senha" id="senha" handler={handleInput} required />
                     <Input label="Confirme sua Senha" id="confimeSenha" handler={handleInput} required />
                     <div id="botoes">
-                        <button>Confirmar</button>
-                        <button id="cancelar">Cancelar</button>
+                    <Link to="/ConfColaborador"><button>Confirmar</button></Link>
+                    <Link to="/Login"><button id="cancelar">Cancelar</button></Link>
                     </div>
                 </FormContainer>
             </ContainerCadastro>

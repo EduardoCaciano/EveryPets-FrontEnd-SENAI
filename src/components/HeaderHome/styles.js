@@ -64,9 +64,13 @@ export const Container = styled.header`
       width: 100%;
       padding-top: 5px;
 
-      >img{
+      >a{
+         >img{
          height: 28px;
+         width: initial;
          float: right;
+         border-radius: 5px;
+
 
          :hover{
             box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
@@ -74,6 +78,9 @@ export const Container = styled.header`
             cursor: pointer;
          }
       }
+      }
+
+
    }
    
    >#headerCardes{

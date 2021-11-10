@@ -59,12 +59,21 @@ export const FormContainer = styled.form`
            color: white;
            font-size: 15px;
        }
-       >#cadastre{
-            font-weight: bold;
-       }
-       >#cadastre:hover{
-        transform: scale(1.1);
-        transition: .0.1s;
-    }
+
+       >a{
+           width: initial;
+           height: initial;
+           text-decoration: none;
+
+            >#cadastre{
+                font-weight: bold;
+                color: white;
+            }
+            >#cadastre:hover{
+                transform: scale(1.1);
+                transition: .0.1s;
+                }
+        }
+       
    }
 `;

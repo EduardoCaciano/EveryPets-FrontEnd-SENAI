@@ -56,14 +56,14 @@ export const FormContainer = styled.form`
         align-items: center;
 
         >#caixaCep{
-        width: 67px;
+        width: 13%;
         height: 100px;
         display: flex;
         }
     
         >#caixaRua{
         margin-left: 15px;
-        width: 100%;
+        width: 87%;
         height: 100px;
         }
     }
@@ -101,35 +101,43 @@ export const FormContainer = styled.form`
         display: flex;
         align-items: center;
 
-        >button {
-        width: 300px;
-        height: inherit;
-        border-radius: 30px;
-        margin-top: 15px;
-        border-color: #1ACC2B;
-        background-color: #1ACC2B;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
+        >a{
+            width: 100%;
+            height: initial;
+            text-decoration: none;
+            
+            >button {
+            width: 300px;
+            height: inherit;
+            border-radius: 30px;
+            margin-top: 15px;
+            border-color: #1ACC2B;
+            background-color: #1ACC2B;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            >#cancelar {
+            width: 300px;
+            height: inherit;
+            border-radius: 30px;
+            margin-top: 15px;
+            border-color: #E24513;
+            background-color: #E24513;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            }
         }
 
-        >#cancelar {
-        width: 300px;
-        height: inherit;
-        border-radius: 30px;
-        margin-top: 15px;
-        border-color: #E24513;
-        background-color: #E24513;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-        }
+        
     }
 
 `;

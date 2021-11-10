@@ -6,6 +6,7 @@ import { signIn } from "../../services/security";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import NomesColaboradores from "../../components/NomesColaborador";
 
 function Cadastrar() {
@@ -62,10 +63,10 @@ function Cadastrar() {
                     <Input label="Confirme sua Senha" id="confimeSenha" handler={handleInput} required />
                     <div id="botoes">
                         <button>Confirmar</button>
-                        <button id="cancelar">Cancelar</button>
+                        <button id="cancelar">Limpar</button>
                     </div>
                     <div id="botaoFinalizar">
-                        <button>Finalizar</button>
+                        <Link to="/Catalogo"><button>Finalizar</button></Link>
                     </div>
                 </FormContainer>
             </ContainerCadastro>

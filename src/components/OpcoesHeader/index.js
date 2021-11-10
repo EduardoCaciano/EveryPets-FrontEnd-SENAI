@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Acessos, Opcoes, Paginas } from "./styles";
 
 function OpcoesHeader() {
@@ -5,18 +6,18 @@ function OpcoesHeader() {
     return (
         <>
             <Paginas>
-                <h1>HOME</h1>
-                <h1>SOBRE NÓS</h1>
-                <h1>SERVIÇOS</h1>
-                <h1>CONTATOS</h1>
+                <Link to="/Home"><h1>HOME</h1></Link>
+                <Link to="/Home"><h1>SOBRE NÓS</h1></Link>
+                <Link to="/Home"><h1>SERVIÇOS</h1></Link>
+                <Link to="/Home"><h1>CONTATOS</h1></Link>
             </Paginas>
 
             <Acessos>
-                <h2>Login</h2>
+                <Link to="/Login"><h2>Login</h2></Link>
                 <h3>ou</h3>
-                <h2>Cadastre-se</h2>
-            </Acessos>
-            
+                <Link to="/EscolhaSegmento"><h2>Cadastre-se</h2></Link>
+            </Acessos >
+
         </>
     );
 }

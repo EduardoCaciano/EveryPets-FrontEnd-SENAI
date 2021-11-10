@@ -56,34 +56,53 @@ export const ContainerPrimary = styled.header`
                 padding-bottom: 8px;
                 border-radius: 0px 0px 20px 20px;
 
-                >button {
-                width: 150px;
-                height: inherit;
-                border-radius: 30px;
-                border-color: #1ACC2B;
-                background-color: #1ACC2B;
-                color: white;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 15px;
-                display:block;
-                margin-left: auto;
-                margin-right: auto;
+                >a{
+                    width: 100%;
+                    height: initial;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 8px;
+                    border-radius: 0px 0px 20px 20px;
+                    text-decoration: none;
+                    :hover{
+                        transform: scale(1.1);
+                        transition: .2s;
+                    }
+                    :visited{
+                        color: rgba(0, 0, 0, 0);
+                    }
+
+                    >button {
+                    width: 150px;
+                    height: inherit;
+                    border-radius: 30px;
+                    border-color: #1ACC2B;
+                    background-color: #1ACC2B;
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    display:block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    }
+
+                    >#nao {
+                    width: 150px;
+                    height: inherit;
+                    border-radius: 30px;
+                    border-color: #E24513;
+                    background-color: #E24513;
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 15px;
+                    display:block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    } 
+                    >#nao:visited{
+                        color: #1ACC;
+                    }
                 }
-
-                >#nao {
-                width: 150px;
-                height: inherit;
-                border-radius: 30px;
-                border-color: #E24513;
-                background-color: #E24513;
-                color: white;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 15px;
-                display:block;
-                margin-left: auto;
-                margin-right: auto;
             }
-        }
-
         }
 `;

@@ -54,6 +54,8 @@ export const FormContainer = styled.form`
         display: flex;
         align-items: center;
 
+                    
+
         >button {
         width: 200px;
         height: inherit;
@@ -68,7 +70,12 @@ export const FormContainer = styled.form`
         margin-left: auto;
         margin-right: auto;
         padding: 10px 10px 10px 10px ;
+            :hover{
+                transform: scale(1.1);
+                transition: .2s;
+            }
         }
+        
 
         >#cancelar {
         width: 200px;
@@ -83,6 +90,10 @@ export const FormContainer = styled.form`
         display:block;
         margin-left: auto;
         margin-right: auto;
+            :hover{
+                    transform: scale(1.1);
+                    transition: .2s;
+                }
         }
     }
 
@@ -93,19 +104,25 @@ export const FormContainer = styled.form`
         display: flex;
         align-items: center;
 
-        >button {
-        width: 200px;
-        height: inherit;
-        border-radius: 30px;
-        margin-top: 15px;
-        border-color: #1Ad;
-        background-color: #1Ad;
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
+        >a{
+            width: 100%;
+            height: initial;
+            text-decoration: none;
+        
+            >button {
+                width: 200px;
+                height: inherit;
+                border-radius: 30px;
+                margin-top: 15px;
+                border-color: #1Ad;
+                background-color: #1Ad;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+        }
         }
     }
 

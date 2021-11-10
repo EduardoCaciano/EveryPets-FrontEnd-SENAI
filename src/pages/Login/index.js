@@ -6,6 +6,7 @@ import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 function Login() {
 
@@ -54,7 +55,7 @@ function Login() {
                     </div>
                     <nav>
                         <p>Esqueceu a Senha?</p>
-                        <p id="cadastre">Novo aqui? Cadastre-se</p>
+                        <Link to="/EscolhaSegmento"><p id="cadastre">Novo aqui? Cadastre-se</p></Link>
                     </nav>
                 </FormContainer>
             </Container>

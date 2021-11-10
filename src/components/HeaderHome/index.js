@@ -1,7 +1,9 @@
-import { Container, } from "./styles";
+import { Container } from "./styles";
+import { Link } from "react-router-dom";
 import logo from "../../assents/logo2.png"
 import botaoSair from "../../assents/botaoSair.png"
 import profile from "../../assents/profile.jpg";
+
 
 function Header() {
 
@@ -14,9 +16,12 @@ function Header() {
                 <p>Diego | Veterinario</p>
             </nav>
 
-            <div id="sair">
-                <img src={botaoSair} />
-            </div>
+                <div id="sair">
+                <Link to="/Home">
+                    <img src={botaoSair} />
+                </Link>
+                </div>
+            
 
             <nav id="headerCardes">
                 <div class="cards">
@@ -61,7 +66,7 @@ function Header() {
                         <div class="containerCardeInformacoes">
                             <p>90</p>
                         </div>
-                        <p>Mensagens</p>
+                        <p>Confirmações</p>
                     </div>
                 </nav>
             </div>

@@ -10,19 +10,26 @@ export const Paginas = styled.header`
    align-items: center;
    justify-content: space-between;
 
-    >h1{
-        font-size: 20px;
-        color: white;
-        flex: auto;
-        align-items: center;
-        padding-left: 30px;
-        text-decoration: none;
-    }  
+   >a{
+       text-decoration: none;
+       width: initial;
+       height: initial;
+       
+        >h1{
+            font-size: 20px;
+            color: white;
+            flex: auto;
+            align-items: center;
+            padding-left: 30px;
+            text-decoration: none;
+        }  
 
-    >h1:hover{
-        transform: scale(1.1);
-        transition: .2s;
-    }
+        >h1:hover{
+            transform: scale(1.1);
+            transition: .2s;
+        }
+   }
+    
 `;
 
 export const Acessos = styled.header`

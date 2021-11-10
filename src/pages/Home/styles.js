@@ -65,7 +65,88 @@ export const Container = styled.div`
         }
     }
 
-    
+    >body{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            height: initial;
+            text-align: center;
+            background-color: white;
+        }
+
+        p{
+            height: 100%;
+            padding-top: 15px;
+            font-size: 20px;
+            text-align: justify;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 20px;
+        }
+
+        >#mercado{
+            height: 100%;
+            width: 25%;
+            border-right:solid #BDBDBD 2.5px;
+        }
+
+        >#missao{
+            height: 100%;
+            width: 25%;
+            
+        }
+
+        >#valores{
+            height: 100%;
+            width: 25%;
+            border-left:solid #BDBDBD 2.5px;
+        }
+    }
+
+    >#tituloServicos{
+        height: initial;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 20px;
+
+            h1{
+                width: 28%;
+                height: initial;
+                font-size: 40px;
+                text-align: center;
+                border-bottom:solid #666666 2px;
+            }
+    }
+
+    >article{
+        width: 100%;
+        height: initial;
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        background-color: green;
+
+        h3{
+            width: 100%;
+            height: initial;
+            text-align: center;
+            background-color: orange;
+        }
+
+        >.cards{
+            width: 30%;
+            height: 500px;
+            border-radius: 20px;
+            background-color: red;
+            padding: 20px;
+        }
+    }
 
 `;
 

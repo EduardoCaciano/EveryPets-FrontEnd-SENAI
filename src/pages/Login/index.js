@@ -26,14 +26,14 @@ function Login() {
         e.preventDefault();
 
         try {
-            const response = await api.post("/sessions", {
+            const response = await api.post("/sessionEstablishment", {
                 email: formLogin.email,
                 password: formLogin.senha
             });
 
             signIn(response.data)
 
-            history.push("/home");
+            history.push("/agendados");
         } catch (error) {
             console.log(error.response.data);
         }

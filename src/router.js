@@ -24,51 +24,51 @@ function Router() {
         <BrowserRouter>
             <Switch>
 
-                <Route exact path="/Home">
+                <Route exact path="/">
                     <Home />
                 </Route>
 
-                <Route exact path="/Login">
+                <Route path="/login">
                     <Login />
                 </Route>
                 
-                <Route exact path="/Catalogo">
+                <Route path="/catalogo">
                     <CatalogoProdutos />
                 </Route>
                 
-                <Route exact path="/CadastroP">
+                <Route path="/cadastroP">
                     <CadastroProduto />
                 </Route>
 
-                <Route exact path="/Cadastrar">
+                <Route path="/cadastrar">
                     <Cadastrar />
                 </Route>
                 
-                <Route exact path="/CadastroS">
+                <Route path="/cadastroS">
                     <CadastroServico />
                 </Route>
 
-                <Route exact path="/Solicitacoes">
+                <Route path="/solicitacoes">
                     <Solicitacoes />
                 </Route>
                 
-                <Route exact path="/Agendados">
+                <Route path="/agendados">
                     <Agendados />
                 </Route>
                 
-                <Route exact path="/Footer">
+                <Route path="/footer">
                     <Footer />
                 </Route>
                 
-                <Route exact path="/ConfColaborador">
+                <Route path="/confColaborador">
                     <ConfColaborador />
                 </Route>
                 
-                <Route exact path="/CadastroColaborador">
+                <Route path="/cadastroColaborador">
                     <CadastroColaborador />
                 </Route>
 
-                <Route exact path="/EscolhaSegmento">
+                <Route path="/escolhaSegmento">
                     <EscolhaSegmento />
                 </Route>
 

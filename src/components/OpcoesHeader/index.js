@@ -6,10 +6,10 @@ function OpcoesHeader() {
     return (
         <>
             <Paginas>
-                <Link to="/Home"><h1>HOME</h1></Link>
-                <Link to="/Home"><h1>SOBRE NÓS</h1></Link>
-                <Link to="/Home"><h1>SERVIÇOS</h1></Link>
-                <Link to="/Home"><h1>CONTATOS</h1></Link>
+                <Link to="/"><h1>HOME</h1></Link>
+                <Link to="/"><h1>SOBRE NÓS</h1></Link>
+                <Link to="/"><h1>SERVIÇOS</h1></Link>
+                <Link to="/"><h1>CONTATOS</h1></Link>
             </Paginas>
 
             <Acessos>

@@ -17,7 +17,7 @@ function Header() {
             </nav>
 
                 <div id="sair">
-                <Link to="/Home">
+                <Link to="/login">
                     <img src={botaoSair} />
                 </Link>
                 </div>

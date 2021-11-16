@@ -3,301 +3,98 @@ import Input from "../../components/InputCadastro";
 import { FormContainer } from "../Cadastrar/styles";
 import { ContainerCadastro } from "./styles";
 import { signIn } from "../../services/security";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
+import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
-import { getEndereco } from "../../services/viaCepApi";
+
 
 function Cadastrar() {
-  const history = useHistory();
 
-  // handle input genérico
+    const history = useHistory();
 
-  const [estabelecimento, setEstabelecimento] = useState({
-    establishment: {
-      name_establishment: "",
-      responsible_name: "",
-      cnpj: "",
-      password: "",
-      confirm_password: "",
-      email: "",
-      ddd: "",
-      telephone: "",
-      type_establishment: "",
-    },
-    address: {
-      name_address: "", //Rua
-      number: "",
-      cep: "",
-      district: "", //Bairro
-      complement: "",
-      city: "",
-      initials_state: "", //UF
-    },
-  });
-
-  const handleInputEstabelecimento = (e) => {
-    setEstabelecimento({
-      ...estabelecimento,
-      establishment: {
-        ...estabelecimento.establishment,
-        [e.target.id]: e.target.value,
-      },
+    const [formLogin, setFormLogin] = useState({
+        email: "",
+        senha: ""
     });
-  };
 
-  const handleInputEstabelecimentoAddress = (e) => {
-    setEstabelecimento({
-      ...estabelecimento,
-      address: {
-        ...estabelecimento.address,
-        [e.target.id]: e.target.value,
-      },
-    });
-  };
+    // handle input genérico
+    const handleInput = (e) => {
+        setFormLogin({ ...formLogin, [e.target.id]: e.target.value });
+    }
 
-  useEffect(() => {
-    const setEndereco = async () => {
-      const endereco = await getEndereco(estabelecimento.address.cep);
-      console.log(endereco);
-      setEstabelecimento({
-        establishment: {
-          name_establishment: estabelecimento.establishment.name_establishment,
-          responsible_name: estabelecimento.establishment.responsible_name,
-          cnpj: estabelecimento.establishment.cnpj,
-          password: estabelecimento.establishment.password,
-          confirm_password: estabelecimento.establishment.confirm_password,
-          email: estabelecimento.establishment.email,
-          ddd: estabelecimento.establishment.ddd,
-          telephone: estabelecimento.establishment.telephone,
-          type_establishment: estabelecimento.establishment.type_establishment,
-        },
-        address: {
-          name_address: endereco.logradouro, //Rua
-          number: estabelecimento.address.number,
-          cep: estabelecimento.address.cep,
-          district: endereco.bairro, //Bairro
-          complement: estabelecimento.address.complement,
-          city: endereco.localidade,
-          initials_state: endereco.uf, //UF
-        },
-      });
-    };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    if (estabelecimento.address.cep.length === 9) setEndereco();
-  }, [estabelecimento.address.cep]);
+        try {
+            const response = await api.post("/sessions", {
+                email: formLogin.email,
+                password: formLogin.senha
+            });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+            signIn(response.data)
 
-    try {
-      const {
-        establishment: {
-            name_establishment,
-            responsible_name,
-            cnpj,
-            password,
-            confirm_password,
-            email,
-            ddd,
-            telephone,
-            type_establishment
-        },
-        address:{
-            name_address,
-            number,
-            cep,
-            district,
-            complement,
-            city,
-            initials_state
+            history.push("/home");
+        } catch (error) {
+            console.log(error.response.data);
         }
-      } = estabelecimento;
+    }
 
-      if (
-        !estabelecimento.establishment.name_establishment ||
-        !estabelecimento.establishment.responsible_name ||
-        !estabelecimento.establishment.cnpj ||
-        !estabelecimento.establishment.password ||
-        !estabelecimento.establishment.confirm_password ||
-        !estabelecimento.establishment.email ||
-        !estabelecimento.establishment.ddd ||
-        !estabelecimento.establishment.telephone ||
-        !estabelecimento.establishment.type_establishment ||
-        !estabelecimento.address.name_address ||
-        !estabelecimento.address.number ||
-        !estabelecimento.address.cep ||
-        !estabelecimento.address.district ||
-        !estabelecimento.address.initials_state   
-        ) {
-          return alert("alguns campos obrigatórios não preenchidos");
-        }
-
-        if (!estabelecimento.establishment.telephone) {
-            return alert("Você precisa informar seu telefone")
-        }
-
-        const  response = await api.post("/establishment", estabelecimento)
-
-        if (response.status === 200) {
-            signIn(response.data.establishment.id, response.data.establishment.type_establishment);
-            history.push("/");
-        }
-
-        console.log(response.data);
-    } catch (err) {}
-  };
-
-  console.log(estabelecimento);
-
-  return (
-    <>
-      <HeaderCadastro />
-      <ContainerCadastro>
-        <h1>Cadastro</h1>
-        <FormContainer onSubmit={handleSubmit}>
-          <Input
-            label="Nome do Estabelecimento"
-            id="name_establishment"
-            value={estabelecimento.establishment.name_establishment}
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <Input
-            label="CNPJ"
-            id="cnpj"
-            value={estabelecimento.establishment.cnpj}
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <Input
-            label="Tipo do Estabelecimento"
-            id="type_establishment"
-            value={estabelecimento.establishment.type_establishment}
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <div id="containerTelefone">
-            <div id="caixaDdd">
-              <Input
-                label="DDD"
-                id="ddd"
-                value={estabelecimento.establishment.ddd}
-                handler={handleInputEstabelecimento}
-                required
-              />
-            </div>
-            <div id="caixaTelefone">
-              <Input
-                label="Telefone"
-                id="telephone"
-                value={estabelecimento.establishment.telephone}
-                handler={handleInputEstabelecimento}
-                required
-              />
-            </div>
-          </div>
-
-          <div id="containerCepRua">
-            <div id="caixaCep">
-              <Input
-                label="CEP"
-                id="cep"
-                value={estabelecimento.address.cep}
-                handler={handleInputEstabelecimentoAddress}
-                required
-              />
-            </div>
-            <div id="caixaRua">
-              <Input
-                label="Rua"
-                id="name_address"
-                value={estabelecimento.address.name_address}
-                handler={handleInputEstabelecimentoAddress}
-                required
-              />
-            </div>
-          </div>
-
-          <div id="containerNComplemento">
-            <div id="caixaNumero">
-              <Input
-                label="N°"
-                id="number"
-                value={estabelecimento.address.number}
-                handler={handleInputEstabelecimentoAddress}
-                required
-              />
-            </div>
-            <div id="caixaComplemento">
-              <Input
-                label="Complemento"
-                id="complement"
-                value={estabelecimento.address.complement}
-                handler={handleInputEstabelecimentoAddress}
-                required
-              />
-            </div>
-            <div id="caixaUf">
-              <Input
-                label="UF"
-                id="initials_state"
-                value={estabelecimento.address.initials_state}
-                handler={handleInputEstabelecimentoAddress}
-                required
-              />
-            </div>
-          </div>
-
-          <Input
-            label="Cidade"
-            id="city"
-            value={estabelecimento.address.city}
-            handler={handleInputEstabelecimentoAddress}
-            required
-          />
-          <Input
-            label="Bairro"
-            id="district"
-            value={estabelecimento.address.district}
-            handler={handleInputEstabelecimentoAddress}
-            required
-          />
-          <Input
-            label="Nome do Responsavel"
-            id="responsible_name"
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <Input
-            label="Email"
-            id="email"
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <Input
-            label="Senha"
-            id="password"
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <Input
-            label="Confirme sua Senha"
-            id="confirm_password"
-            handler={handleInputEstabelecimento}
-            required
-          />
-          <div id="botoes">
-            <button>Confirmar</button>
-            <button id="cancelar" onClick={() => history.push("/")}>
-              Cancelar
-            </button>
-          </div>
-        </FormContainer>
-      </ContainerCadastro>
-    </>
-  );
+    return (
+        <>
+            <HeaderCadastro />
+            <ContainerCadastro>
+                <h1>Cadastro</h1>
+                <FormContainer onSubmit={handleSubmit}>
+                    <Input label="Nome do Estabelecimento" id="estabelecimento" handler={handleInput} required />
+                    <Input label="CNPJ" id="cnpj" handler={handleInput} required />
+                    <Input label="Tipo do Estabelecimento" id="tipoEstabelecimento" handler={handleInput} required />
+                    <div id="containerTelefone">
+                        <div id="caixaDdd">
+                            <Input label="DDD" id="ddd" handler={handleInput} required />
+                        </div>
+                        <div id="caixaTelefone">
+                        <Input label="Telefone" id="telefone" handler={handleInput} required />
+                        </div>
+                    </div>
+                    
+                    <div id="containerCepRua">
+                        <div id="caixaCep">
+                            <Input label="CEP" id="cep" handler={handleInput} required />
+                        </div>
+                        <div id="caixaRua">
+                            <Input label="Rua" id="rua" handler={handleInput} required />
+                        </div>
+                    </div>
+                    
+                    <div id="containerNComplemento">
+                        <div id="caixaNumero">
+                        <Input label="N°" id="numeroCasa" handler={handleInput} required />
+                        </div>
+                        <div id="caixaComplemento">
+                        <Input label="Complemento" id="complemento" handler={handleInput} required />
+                        </div>
+                        <div id="caixaUf">
+                        <Input label="UF" id="uf" handler={handleInput} required />
+                        </div>
+                    </div>
+                    
+                    <Input label="Cidade" id="cidade" handler={handleInput} required />
+                    <Input label="Bairro" id="bairro" handler={handleInput} required />
+                    <Input label="Nome do Responsavel" id="nomeResponsavel" handler={handleInput} required />
+                    <Input label="Email" id="email" handler={handleInput} required />
+                    <Input label="Senha" id="senha" handler={handleInput} required />
+                    <Input label="Confirme sua Senha" id="confimeSenha" handler={handleInput} required />
+                    <div id="botoes">
+                    <Link to="/ConfColaborador"><button>Confirmar</button></Link>
+                    <Link to="/Login"><button id="cancelar">Cancelar</button></Link>
+                    </div>
+                </FormContainer>
+            </ContainerCadastro>
+            <Footer />
+        </>
+    );
 }
 
 export default Cadastrar;

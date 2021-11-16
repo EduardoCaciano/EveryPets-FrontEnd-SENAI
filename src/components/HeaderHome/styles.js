@@ -100,7 +100,11 @@ export const Container = styled.header`
          border-color: var(--primary);
       }
 
-      >.cards {
+      >a{
+         width: 100%;
+         height: initial;
+         text-decoration: none;
+         >.cards {
          width: 190px;
          height: 39px;         
          border-radius: 25px;
@@ -124,6 +128,8 @@ export const Container = styled.header`
             color: white;
          }
       }
+      }
+      
    }
 
    >#caixaInformacoesParciais{

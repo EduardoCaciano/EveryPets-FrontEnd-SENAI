@@ -1,41 +1,36 @@
 import CardAgendamento from "../../components/CardAgendamentos";
+import Footer from "../../components/Footer";
 import HeaderHome from "../../components/HeaderHome";
 import { ContainerAgendados } from "./styles";
 
-
 function Cadastrar() {
+  return (
+    <>
+      <HeaderHome />
+      <ContainerAgendados>
+        <h1>Atendimentos hoje</h1>
+        <h3>14/10/2021</h3>
 
-    return (
-        <>
-            <HeaderHome />
-            <ContainerAgendados>
-                <h1>Atendimentos hoje</h1>
-                <h3>14/10/2021</h3>
+        <div id="containerCachorro"></div>
 
-                <div id="containerCachorro">
-                </div>
+        <nav>
+          <CardAgendamento />
+          <CardAgendamento />
+        </nav>
 
-                <nav>
-                    <CardAgendamento />
-                    <CardAgendamento />
+        <h1>Atendimentos Amanhã</h1>
+        <h3>15/10/2021</h3>
 
-                </nav>
+        <div id="containerGatinho"></div>
 
-                <h1>Atendimentos Amanhã</h1>
-                <h3>15/10/2021</h3>
-
-                <div id="containerGatinho">
-                </div>
-
-                <nav>
-                    <CardAgendamento />
-                    <CardAgendamento />
-                </nav>
-
-                
-            </ContainerAgendados>
-        </>
-    );
+        <nav>
+          <CardAgendamento />
+          <CardAgendamento />
+        </nav>
+      </ContainerAgendados>
+      <Footer />
+    </>
+  );
 }
 
 export default Cadastrar;

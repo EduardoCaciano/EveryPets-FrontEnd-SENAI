@@ -7,7 +7,8 @@ import { signIn } from "../../services/security";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
-import logo from "../../assents/gatoCadastro.png";
+import logo from "../../assents/gatoCadastro.png"
+import Footer from "../../components/Footer";
 
 function Cadastrar() {
   
@@ -77,7 +78,10 @@ function Cadastrar() {
         </FormContainer>
       </ContainerCadastro>
     </>
-  );
+  );        <Footer />
+        </>
+    );
+
 }
 
 export default Cadastrar;

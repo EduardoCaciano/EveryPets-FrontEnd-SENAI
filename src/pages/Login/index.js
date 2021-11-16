@@ -59,7 +59,7 @@ function Login() {
                     </nav>
                 </FormContainer>
             </Container>
-
+            <Footer />
         </>
     );
 }

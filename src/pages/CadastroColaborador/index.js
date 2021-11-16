@@ -8,6 +8,7 @@ import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import NomesColaboradores from "../../components/NomesColaborador";
+import Footer from "../../components/Footer";
 
 function Cadastrar() {
 
@@ -70,6 +71,7 @@ function Cadastrar() {
                     </div>
                 </FormContainer>
             </ContainerCadastro>
+            <Footer />
         </>
     );
 }

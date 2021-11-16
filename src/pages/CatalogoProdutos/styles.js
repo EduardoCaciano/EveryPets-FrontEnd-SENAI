@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContainerCatalogo = styled.div`
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
     margin-top: 258px;

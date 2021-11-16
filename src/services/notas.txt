@@ -1,0 +1,7 @@
+fazer a logica do botão de confirmar e enviar pra tela 
+confirmar e fazer o botão puxar a pagina de login, não mandar
+direto pra home
+
+o viaCEP ta consumido os campos ja tão batendo na api
+só enviar pra api agr
+e colocar as mascaras

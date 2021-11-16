@@ -52,8 +52,8 @@ function Cadastrar() {
 
                 <FormContainer onSubmit={handleSubmit}>
                     <Input label="Tipo de Serviços" id="servico" handler={handleInput} required />
-                    
-                    
+                    <Input label="Valor" id="valor" handler={handleInput} required />
+                    <Input label="Descrição" id="descricao" handler={handleInput} required />
                     <div id="arquivos">
                         <div id="caixaImagem">
                             <Input label="Imagem" id="imagem" type="file" handler={handleInput} required />

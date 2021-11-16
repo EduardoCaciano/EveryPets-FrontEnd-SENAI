@@ -1,8 +1,4 @@
 import HeaderHome from "../../components/HeaderHome";
-import { signIn } from "../../services/security";
-import { useState } from "react";
-import { api } from "../../services/api";
-import { useHistory } from "react-router";
 import { ContainerCatalogo } from "./styles";
 import logo from "../../assents/profile.jpg"
 import editar from "../../assents/editar.png"
@@ -12,6 +8,7 @@ import consulta from "../../assents/consulta.jpg"
 import cirurgia from "../../assents/cirurgia.jpg"
 import banhoeTosa from "../../assents/banhoeTosa.png"
 import CardCirurgia from "../../components/CardCirurgia";
+import Footer from "../../components/Footer";
 
 function CatalogoProdutos() {
 
@@ -142,6 +139,7 @@ function CatalogoProdutos() {
                     <CardCirurgia/>
                     <CardCirurgia/>
                 </div>
+                <Footer />
             </ContainerCatalogo>
         </>
     );

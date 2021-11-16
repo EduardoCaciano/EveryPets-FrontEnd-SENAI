@@ -11,6 +11,7 @@ export const ContainerAgendados = styled.header`
     margin-top: 240px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     *{
         font-weight: lighter;
     }
@@ -67,5 +68,7 @@ export const ContainerAgendados = styled.header`
             background-color: var(--secundary);
             margin-left: auto;
             margin-right: auto;
+            border-radius: 25px;
+            box-shadow: 3px 8px 10px 10px rgba(0, 0, 0, 0.25);
         }
 `;

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 import HeaderCadastro from "../../components/HeaderCadastro";
 import { ContainerPrimary } from "./styles";
 
@@ -27,6 +28,7 @@ function Cadastrar() {
                 </main>
 
             </ContainerPrimary>
+            <Footer />
         </>
     );
 }

@@ -8,6 +8,7 @@ import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import logo from "../../assents/gatoCadastro.png"
+import Footer from "../../components/Footer";
 
 function Cadastrar() {
 
@@ -72,6 +73,7 @@ function Cadastrar() {
                     </div>
                 </FormContainer>
             </ContainerCadastro>
+            <Footer />
         </>
     );
 }

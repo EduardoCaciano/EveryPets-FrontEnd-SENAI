@@ -92,6 +92,7 @@ function Cadastrar() {
                     </div>
                 </FormContainer>
             </ContainerCadastro>
+            <Footer />
         </>
     );
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContainerCadastro = styled.header`
     width: 100vw;
-    height: 50vh;
+    height: 56vh;
     align-items: center;
     justify-content: center;
     margin-top: 300px;

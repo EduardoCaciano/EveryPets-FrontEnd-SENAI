@@ -11,71 +11,77 @@ import logo from "../../assents/gatoCadastro.png"
 import Footer from "../../components/Footer";
 
 function Cadastrar() {
+  
 
-    const history = useHistory();
+//   async function handleCadastro(e) {
+//     e.preventDefault();
 
-    const [formLogin, setFormLogin] = useState({
-        email: "",
-        senha: ""
-    });
+//     if (senha !== confirmarSenha) {
+//       setErro("As senhas não conferem");
+//       return;
+//     }
 
-    // handle input genérico
-    const handleInput = (e) => {
-        setFormLogin({ ...formLogin, [e.target.id]: e.target.value });
-    }
+//     setLoading(true);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+//     const data = {
+//       nome,
+//       raca,
+//       idade,
+//       sexo,
+//       descricao,
+//       foto,
+//       preco,
+//       cidade,
+//       estado,
+//       telefone,
+//       email,
+//       senha,
+//     };
 
-        try {
-            const response = await api.post("/sessions", {
-                email: formLogin.email,
-                password: formLogin.senha
-            });
+//     try {
+//       await api.post("/cadastro", data);
+//       history.push("/");
+//     } catch (err) {
+//       setErro("Erro no cadastro");
+//     }
 
-            signIn(response.data)
+//     setLoading(false);
+//   }
 
-            history.push("/home");
-        } catch (error) {
-            console.log(error.response.data);
-        }
-    }
+  return (
+    <>
+      <HeaderHome />
+      <ContainerCadastro>
+        <h1>Cadastre seu produto</h1>
 
-    return (
-        <>
-            <HeaderHome />
-            <ContainerCadastro>
-                <h1>Cadastre seu produto</h1>
-                
-                <div id="containerGatinho">
-                    <img src={logo} />
-                </div>
+        <div id="containerGatinho">
+          <img src={logo} />
+        </div>
 
-                <FormContainer onSubmit={handleSubmit}>
-                    <Input label="Tipo de Serviços" id="servico" handler={handleInput} required />
-                    <Input label="Nome do Produto" id="produto" handler={handleInput} required />
-                    <Input label="Tamanho" id="tamanho" handler={handleInput} required />
-                    <Input label="Quantidade" id="quantidade" handler={handleInput} required />
-                    <Input label="Valor" id="valor" handler={handleInput} required />
-                    <Input label="Cor" id="cor" handler={handleInput} required />
-                    <Input label="Descrição" id="descricao" handler={handleInput} required />
-                    
-                    <div id="arquivos">
-                        <div id="caixaImagem">
-                            <Input label="Imagem" id="imagem" type="file" handler={handleInput} required />
-                        </div>
-                            <button>Upload</button>
-                    </div>
+        <FormContainer>
+          <Input label="Nome do Produto" id="produto" required />
+          <Input label="Quantidade" id="quantidade" required />
+          <Input label="Valor" id="valor" required />
+          <Input label="Descrição" id="descricao" required />
 
-                    <div id="botoes">
-                        <button>Confirmar</button>
-                        <button id="cancelar">Cancelar</button>
-                    </div>
-                </FormContainer>
-            </ContainerCadastro>
-            <Footer />
+          <div id="arquivos">
+            <div id="caixaImagem">
+              <Input label="Imagem" id="imagem" type="file" required />
+            </div>
+            <button>Upload</button>
+          </div>
+
+          <div id="botoes">
+            <button>Confirmar</button>
+            <button id="cancelar">Cancelar</button>
+          </div>
+        </FormContainer>
+      </ContainerCadastro>
+    </>
+  );        <Footer />
         </>
     );
+
 }
 
 export default Cadastrar;

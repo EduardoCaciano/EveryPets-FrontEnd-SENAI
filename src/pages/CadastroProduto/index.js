@@ -7,46 +7,45 @@ import { signIn } from "../../services/security";
 import { useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
-import logo from "../../assents/gatoCadastro.png"
+import logo from "../../assents/gatoCadastro.png";
 import Footer from "../../components/Footer";
+import FooterSecundario from "../../components/FooterSecundario";
 
 function Cadastrar() {
-  
+  //   async function handleCadastro(e) {
+  //     e.preventDefault();
 
-//   async function handleCadastro(e) {
-//     e.preventDefault();
+  //     if (senha !== confirmarSenha) {
+  //       setErro("As senhas não conferem");
+  //       return;
+  //     }
 
-//     if (senha !== confirmarSenha) {
-//       setErro("As senhas não conferem");
-//       return;
-//     }
+  //     setLoading(true);
 
-//     setLoading(true);
+  //     const data = {
+  //       nome,
+  //       raca,
+  //       idade,
+  //       sexo,
+  //       descricao,
+  //       foto,
+  //       preco,
+  //       cidade,
+  //       estado,
+  //       telefone,
+  //       email,
+  //       senha,
+  //     };
 
-//     const data = {
-//       nome,
-//       raca,
-//       idade,
-//       sexo,
-//       descricao,
-//       foto,
-//       preco,
-//       cidade,
-//       estado,
-//       telefone,
-//       email,
-//       senha,
-//     };
+  //     try {
+  //       await api.post("/cadastro", data);
+  //       history.push("/");
+  //     } catch (err) {
+  //       setErro("Erro no cadastro");
+  //     }
 
-//     try {
-//       await api.post("/cadastro", data);
-//       history.push("/");
-//     } catch (err) {
-//       setErro("Erro no cadastro");
-//     }
-
-//     setLoading(false);
-//   }
+  //     setLoading(false);
+  //   }
 
   return (
     <>
@@ -76,12 +75,10 @@ function Cadastrar() {
             <button id="cancelar">Cancelar</button>
           </div>
         </FormContainer>
+        <FooterSecundario />
       </ContainerCadastro>
     </>
-  );        <Footer />
-        </>
-    );
-
+  );
 }
 
 export default Cadastrar;

@@ -1,10 +1,13 @@
 import { Container } from "./styles";
 import Header from "../../components/Header";
 import logo from "../../assents/profile.jpg";
+import logoEvery from "../../assents/logoEvery.png";
+import sistemPet from "../../assents/sistemPet.jpg";
 import petfood from "../../assents/petFood.png";
 import petcare from "../../assents/petCare.png";
 import petvet from "../../assents/petVet.png";
-import Footer from "../../components/Footer";
+import FooterS from "../../components/FooterSecundario";
+import petserv from "../../assents/petServ.jpg";
 
 function Home() {
   return (
@@ -106,7 +109,7 @@ function Home() {
             </div>
 
             <div id="imagem">
-              <img src={logo} />
+              <img src={petserv} />
             </div>
           </div>
 
@@ -116,7 +119,7 @@ function Home() {
             </div>
 
             <div id="imagem">
-              <img src={logo} />
+              <img src={logoEvery} />
             </div>
           </div>
 
@@ -126,12 +129,14 @@ function Home() {
             </div>
 
             <div id="imagem">
-              <img src={logo} />
+              <img src={sistemPet} />
             </div>
           </div>
         </article>
 
-        <Footer />
+
+
+        <FooterS />
       </Container>
     </>
   );

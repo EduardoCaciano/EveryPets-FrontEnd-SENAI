@@ -67,10 +67,11 @@ export const Container = styled.div`
 
   > body {
     width: 100%;
-    height: 250px;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 
     h2 {
       height: initial;
@@ -112,7 +113,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 20px;
+    margin-top: 100px;
 
     h1 {
       width: 28%;
@@ -147,7 +148,7 @@ export const Container = styled.div`
       border-radius: 20px;
       margin-left: 100px;
       margin-right: 100px;
-      margin-top: 20px;
+      margin-top: 70px;
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
       :hover {
         transform: scale(1.1);

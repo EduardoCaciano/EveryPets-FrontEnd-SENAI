@@ -1,5 +1,6 @@
 import CardAgendamento from "../../components/CardAgendamentos";
 import Footer from "../../components/Footer";
+import FooterSecundario from "../../components/FooterSecundario";
 import HeaderHome from "../../components/HeaderHome";
 import { ContainerAgendados } from "./styles";
 
@@ -28,7 +29,7 @@ function Cadastrar() {
           <CardAgendamento />
         </nav>
       </ContainerAgendados>
-      <Footer />
+      <FooterSecundario />
     </>
   );
 }

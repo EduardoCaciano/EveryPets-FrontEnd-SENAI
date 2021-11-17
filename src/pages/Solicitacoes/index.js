@@ -1,5 +1,6 @@
 import CardAtendimento from "../../components/CardAtendimento";
 import Footer from "../../components/Footer";
+import FooterSecundario from "../../components/FooterSecundario";
 import HeaderCadastro from "../../components/HeaderCadastro";
 import HeaderHome from "../../components/HeaderHome";
 import Input from "../../components/InputSolicitacoes";
@@ -29,7 +30,7 @@ function Cadastrar() {
                     <CardAtendimento />
                 </nav>
             </ContainerSolicitacoes>
-            <Footer />
+            <FooterSecundario />
         </>
     );
 }

@@ -8,7 +8,7 @@ export const Paginas = styled.header`
 
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: space-around;
         
    >a{
             width : initial;
@@ -33,7 +33,7 @@ export const Paginas = styled.header`
 `;
 
 export const Acessos = styled.header`
-   width: 300px;
+   width: 250px;
    top: 0;
    margin-right: 25px;
    display: flex;
@@ -47,11 +47,10 @@ export const Acessos = styled.header`
 
         >h2{
             height: inherit;
-                font-size: 18px;
+                font-size: 1.2em;
                 color: white;
                 flex: auto;
                 align-items: center;
-                padding-left: 30px;
             }
 
             >h2:hover{

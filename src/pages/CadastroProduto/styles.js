@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const ContainerCadastro = styled.header`
     width: 100%;
-    height: 80vh;
+    height: 50vh;
     align-items: center;
     justify-content: center;
     margin-top: 300px;
@@ -48,6 +48,7 @@ export const FormContainer = styled.form`
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
+    margin-bottom: 50px;
 
     >#arquivos{
         height: 25px;

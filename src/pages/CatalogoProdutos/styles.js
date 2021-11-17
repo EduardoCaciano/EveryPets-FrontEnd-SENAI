@@ -100,6 +100,7 @@ export const ContainerCatalogo = styled.div`
         margin-right: auto;
         margin-left: auto;
 
+        >a{
             >img{
             margin-left: 3px;
             height: 28px;
@@ -111,6 +112,8 @@ export const ContainerCatalogo = styled.div`
                 cursor: pointer;
                 }
             }
+        }
+            
     }
 
     >#cardServicos{

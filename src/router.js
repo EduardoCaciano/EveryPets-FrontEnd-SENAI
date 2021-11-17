@@ -3,6 +3,7 @@ import HeaderLogin from "../src/components/Header";
 import Header from "../src/components/Header"
 import HeaderCadastro from "./components/HeaderCadastro";
 import HeaderHome from "./components/HeaderHome"
+import FooterSecundario from "./components/FooterSecundario"
 import Footer from "./components/Footer"
 import Cadastrar from "./pages/Cadastrar";
 import CadastroProduto from "./pages/CadastroProduto";
@@ -56,6 +57,10 @@ function Router() {
                     <Agendados />
                 </Route>
                 
+                <Route path="/footerS">
+                    <FooterSecundario />
+                </Route>
+
                 <Route path="/footer">
                     <Footer />
                 </Route>
@@ -74,6 +79,7 @@ function Router() {
 
             </Switch>
         </BrowserRouter>
+
         </>
     );
 }

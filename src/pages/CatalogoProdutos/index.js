@@ -8,7 +8,8 @@ import consulta from "../../assents/consulta.jpg"
 import cirurgia from "../../assents/cirurgia.jpg"
 import banhoeTosa from "../../assents/banhoeTosa.png"
 import CardCirurgia from "../../components/CardCirurgia";
-import Footer from "../../components/Footer";
+import FooterS from "../../components/FooterSecundario";
+import { Link } from "react-router-dom";
 
 function CatalogoProdutos() {
 
@@ -35,7 +36,7 @@ function CatalogoProdutos() {
 
                 <div id="adicionar">
                     <h3>Adicionar</h3>
-                    <img src={mais} />
+                    <Link to="/cadastroS"><img src={mais} /></Link>
                 </div>
 
                 <div id="cardServicos">
@@ -139,7 +140,7 @@ function CatalogoProdutos() {
                     <CardCirurgia/>
                     <CardCirurgia/>
                 </div>
-                <Footer />
+                <FooterS />
             </ContainerCatalogo>
         </>
     );

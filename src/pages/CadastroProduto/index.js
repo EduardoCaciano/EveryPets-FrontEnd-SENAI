@@ -5,7 +5,7 @@ import { ContainerCadastro } from "./styles";
 import logo from "../../assents/gatoCadastro.png";
 import FooterSecundario from "../../components/FooterSecundario";
 import { useHistory } from "react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { api } from "../../services/api";
 import { signIn } from "../../services/security";
 
@@ -41,7 +41,8 @@ function Cadastrar() {
 
       signIn(response.data.token);
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
+
     }
   };
 
@@ -89,7 +90,7 @@ function Cadastrar() {
 
           <div id="arquivos">
             <div id="caixaImagem">
-              <Input label="Imagem" id="imagem" type="file"  />
+              <Input label="Imagem" id="imagem" type="file" value={produto.image} handler={handleInputProduto} />
             </div>
             <button>Upload</button>
           </div>

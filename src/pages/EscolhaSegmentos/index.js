@@ -11,7 +11,7 @@ function Cadastrar() {
         <div id="containerTitulo" />
 
         <main>
-          <Link to="/Cadastrar">
+          <Link to="/cadastre-se">
             <div id="petshop">
               <div id="titulo">
                 <h1>Sou petshop</h1>
@@ -23,7 +23,7 @@ function Cadastrar() {
 
           <div id="fantasma"></div>
 
-          <Link to="/Cadastrar">
+          <Link to="/cadastre-se">
             <div id="veterinario">
               <div id="titulo">
                 <h1>Sou veterinárioª</h1>

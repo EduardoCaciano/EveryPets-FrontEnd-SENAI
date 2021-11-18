@@ -147,7 +147,7 @@ function Cadastrar() {
 
         signIn(response.data);
 
-        history.push("/Login");
+        history.push("/confColaborador");
 
         // if (response.status === 200) {
         //     signIn(response.data.establishment.id, response.data.establishment.type_establishment);

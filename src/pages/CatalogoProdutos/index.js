@@ -36,7 +36,7 @@ function CatalogoProdutos() {
 
                 <div id="adicionar">
                     <h3>Adicionar</h3>
-                    <Link to="/cadastroS"><img src={mais} /></Link>
+                    <Link to="/cadastro_servico"><img src={mais} /></Link>
                 </div>
 
                 <div id="cardServicos">

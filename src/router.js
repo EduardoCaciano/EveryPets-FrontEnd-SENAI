@@ -1,8 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HeaderLogin from "../src/components/Header";
-import Header from "../src/components/Header"
-import HeaderCadastro from "./components/HeaderCadastro";
-import HeaderHome from "./components/HeaderHome"
+import { Redirect } from "react-router";
+import Header from "../src/components/Header";
 import FooterSecundario from "./components/FooterSecundario"
 import Footer from "./components/Footer"
 import Cadastrar from "./pages/Cadastrar";
@@ -16,6 +14,20 @@ import ConfColaborador from "./pages/ConfirmacaoColaborador";
 import CadastroColaborador from "./pages/CadastroColaborador";
 import EscolhaSegmento from "./pages/EscolhaSegmentos";
 import Home from "./pages/Home";
+import { getUser, isSignedIn } from "./services/security";
+
+
+
+
+function PrivateRoute({ role, children, ...rest }) {
+
+    if (!isSignedIn()) {
+        return <Redirect to="/" />
+    }
+    else{
+        return <Route {...rest}>{children} </Route>;
+    }
+}
 
 
 function Router() {
@@ -33,45 +45,37 @@ function Router() {
                     <Login />
                 </Route>
                 
-                <Route path="/catalogo">
+                <PrivateRoute path="/catalogo_produtos">
                     <CatalogoProdutos />
-                </Route>
+                </PrivateRoute>
                 
-                <Route path="/cadastroP">
+                <PrivateRoute path="/cadastro_produto">
                     <CadastroProduto />
-                </Route>
+                </PrivateRoute>
 
-                <Route path="/cadastrar">
+                <Route path="/cadastre-se">
                     <Cadastrar />
                 </Route>
                 
-                <Route path="/cadastroS">
+                <PrivateRoute path="/cadastro_servico">
                     <CadastroServico />
-                </Route>
+                </PrivateRoute>
 
-                <Route path="/solicitacoes">
+                <PrivateRoute path="/solicitacoes">
                     <Solicitacoes />
-                </Route>
+                </PrivateRoute>
                 
-                <Route path="/agendados">
+                <PrivateRoute path="/agendados">
                     <Agendados />
-                </Route>
+                </PrivateRoute>
                 
-                <Route path="/footerS">
-                    <FooterSecundario />
-                </Route>
-
-                <Route path="/footer">
-                    <Footer />
-                </Route>
-                
-                <Route path="/confColaborador">
+                <PrivateRoute path="/confColaborador">
                     <ConfColaborador />
-                </Route>
+                </PrivateRoute>
                 
-                <Route path="/cadastroColaborador">
+                <PrivateRoute path="/cadastro_colaborador">
                     <CadastroColaborador />
-                </Route>
+                </PrivateRoute>
 
                 <Route path="/escolhaSegmento">
                     <EscolhaSegmento />

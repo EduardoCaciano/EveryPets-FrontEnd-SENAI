@@ -1,51 +1,51 @@
-import HeaderCadastro from "../../components/HeaderCadastro";
 import HeaderHome from "../../components/HeaderHome";
 import Input from "../../components/InputCadastro";
 import { FormContainer } from "../CadastroProduto/styles";
 import { ContainerCadastro } from "./styles";
-import { signIn } from "../../services/security";
-import { useState } from "react";
-import { api } from "../../services/api";
-import { useHistory } from "react-router";
 import logo from "../../assents/gatoCadastro.png";
-import Footer from "../../components/Footer";
 import FooterSecundario from "../../components/FooterSecundario";
+import { useHistory } from "react-router";
+import { useEffect, useState } from "react";
+import { api } from "../../services/api";
+import { signIn } from "../../services/security";
 
 function Cadastrar() {
-  //   async function handleCadastro(e) {
-  //     e.preventDefault();
+  const history = useHistory();
+  const [produto, setProduto] = useState({
+    name: "",
+    amount: "",
+    value: "",
+    description: "",
+    image: "",
+  });
 
-  //     if (senha !== confirmarSenha) {
-  //       setErro("As senhas não conferem");
-  //       return;
-  //     }
+  const handleInputProduto = (event) => {
+    setProduto({
+      ...produto,
+      [event.target.id]: event.target.value,
+    });
+  };
 
-  //     setLoading(true);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-  //     const data = {
-  //       nome,
-  //       raca,
-  //       idade,
-  //       sexo,
-  //       descricao,
-  //       foto,
-  //       preco,
-  //       cidade,
-  //       estado,
-  //       telefone,
-  //       email,
-  //       senha,
-  //     };
+    try {
+      const { name, amount, value, description } = produto;
 
-  //     try {
-  //       await api.post("/cadastro", data);
-  //       history.push("/");
-  //     } catch (err) {
-  //       setErro("Erro no cadastro");
-  //     }
+      if (name === "" || amount === "" || value === "" || description === "") {
+        alert("Preencha todos os campos");
+        return;
+      }
 
-  //     setLoading(false);
-  //   }
+      const response = await api.post("/service", produto);
+
+      signIn(response.data.token);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  console.log(produto);
 
   return (
     <>
@@ -57,22 +57,51 @@ function Cadastrar() {
           <img src={logo} />
         </div>
 
-        <FormContainer>
-          <Input label="Nome do Produto" id="produto" required />
-          <Input label="Quantidade" id="quantidade" required />
-          <Input label="Valor" id="valor" required />
-          <Input label="Descrição" id="descricao" required />
+        <FormContainer onSubmit={handleSubmit}>
+          <Input
+            label="Nome do Produto"
+            id="name"
+            value={produto.name}
+            handler={handleInputProduto}
+            required
+          />
+          <Input
+            label="Quantidade"
+            id="amount"
+            value={produto.amount}
+            handler={handleInputProduto}
+            required
+          />
+          <Input
+            label="Valor"
+            id="value"
+            value={produto.value}
+            handler={handleInputProduto}
+            required
+          />
+          <Input
+            label="Descrição"
+            id="description"
+            value={produto.description}
+            handler={handleInputProduto}
+            required
+          />
 
           <div id="arquivos">
             <div id="caixaImagem">
-              <Input label="Imagem" id="imagem" type="file" required />
+              <Input label="Imagem" id="imagem" type="file"  />
             </div>
             <button>Upload</button>
           </div>
 
           <div id="botoes">
             <button>Confirmar</button>
-            <button id="cancelar">Cancelar</button>
+            <button
+              id="cancelar"
+              onClick={() => history.push("/cadastro_produto")}
+            >
+              Cancelar
+            </button>
           </div>
         </FormContainer>
         <FooterSecundario />

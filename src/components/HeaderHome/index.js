@@ -23,13 +23,13 @@ function Header() {
       </div>
 
       <nav id="headerCardes">
-        <Link to="/catalogo">
+        <Link to="/catalogo_produtos">
           <div class="cards">
             <p>Home</p>
           </div>
         </Link>
 
-        <Link to="/cadastroP">
+        <Link to="/cadastro_produto">
           <div class="cards">
             <p>Cadastro</p>
           </div>

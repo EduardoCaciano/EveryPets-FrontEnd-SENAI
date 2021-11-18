@@ -6,8 +6,8 @@ import { signIn } from "../../services/security";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 import { getEndereco } from "../../services/viaCepApi";
+
 
 function Cadastrar() {
   const history = useHistory();
@@ -33,7 +33,8 @@ function Cadastrar() {
       district: "", //Bairro
       complement: "",
       city: "",
-      initials_state: "", //UF
+      initials_state: "",
+      state: "" //UF
     },
   });
 
@@ -80,13 +81,16 @@ function Cadastrar() {
           district: endereco.bairro, //Bairro
           complement: estabelecimento.address.complement,
           city: endereco.localidade,
-          initials_state: endereco.uf, //UF
+          initials_state: endereco.uf,
+          state: endereco.estado //UF
         },
       });
     };
 
     if (estabelecimento.address.cep.length === 9) setEndereco();
   }, [estabelecimento.address.cep]);
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -111,6 +115,7 @@ function Cadastrar() {
             district,
             complement,
             city,
+            state,
             initials_state
         }
       } = estabelecimento;
@@ -140,13 +145,19 @@ function Cadastrar() {
 
         const  response = await api.post("/establishment", estabelecimento)
 
-        if (response.status === 200) {
-            signIn(response.data.establishment.id, response.data.establishment.type_establishment);
-            history.push("/");
-        }
+        signIn(response.data);
 
-        console.log(response.data);
-    } catch (err) {}
+        history.push("/Login");
+
+        // if (response.status === 200) {
+        //     signIn(response.data.establishment.id, response.data.establishment.type_establishment);
+        //     history.push("/");
+        // }
+
+        // console.log(response.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   console.log(estabelecimento);
@@ -194,6 +205,7 @@ function Cadastrar() {
                 id="telephone"
                 value={estabelecimento.establishment.telephone}
                 handler={handleInputEstabelecimento}
+                
                 required
               />
             </div>
@@ -236,7 +248,14 @@ function Cadastrar() {
                 id="complement"
                 value={estabelecimento.address.complement}
                 handler={handleInputEstabelecimentoAddress}
-                required
+              />
+            </div>
+            <div id="caixaComplemento">
+              <Input
+                label="Estado"
+                id="state"
+                value={estabelecimento.address.state}
+                handler={handleInputEstabelecimentoAddress}
               />
             </div>
             <div id="caixaUf">
@@ -268,23 +287,27 @@ function Cadastrar() {
             label="Nome do Responsavel"
             id="responsible_name"
             handler={handleInputEstabelecimento}
+            value={estabelecimento.establishment.responsible_name}
             required
           />
           <Input
             label="Email"
             id="email"
+            value={estabelecimento.establishment.email}
             handler={handleInputEstabelecimento}
             required
           />
           <Input
             label="Senha"
             id="password"
+            value={estabelecimento.establishment.password}
             handler={handleInputEstabelecimento}
             required
           />
           <Input
             label="Confirme sua Senha"
             id="confirm_password"
+            value={estabelecimento.establishment.confirm_password}
             handler={handleInputEstabelecimento}
             required
           />

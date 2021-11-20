@@ -21,8 +21,8 @@ function Cadastrar() {
                     </div>
 
                     <div id="botoes">
-                    <Link to="/CadastroColaborador"><button>Sim</button></Link>
-                        <Link to="/Catalogo"><button id="nao">Não</button></Link>
+                    <Link to="/cadastro_colaborador"><button>Sim</button></Link>
+                        <Link to="/catalogo_produtos"><button id="nao">Não</button></Link>
                         
                     </div>
                 </main>

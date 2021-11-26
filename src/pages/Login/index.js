@@ -1,12 +1,13 @@
-import { Container, FormContainer, ImagemDogLogin, TelaLogin } from "./styles";
+import { Container, FormContainer} from "./styles";
 import Header from "../../components/Header"
 import Input from "../../components/Input";
 import { signIn } from "../../services/security";
-import { useState } from "react";
+import {  useState } from "react";
 import { api } from "../../services/api";
 import { useHistory } from "react-router";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
+
 
 function Login() {
 
@@ -31,24 +32,44 @@ function Login() {
                 password: formLogin.senha
             });
 
+            if(!response){
+                return alert("Usuário ou senha inválidos");
+            }
+
             signIn(response.data)
 
-            history.push("/agendados");
+            history.push("/cadastro_produto");
         } catch (error) {
-            console.log(error.response.data);
+            console.log(error.data);
         }
     }
+
+
 
     return (
         <>
             <Header />
             <Container>
                 <FormContainer onSubmit={handleSubmit}>
-                    <Input label="E-mail" id="email" handler={handleInput} required />
-                    <Input label="Senha" type="password" id="senha" handler={handleInput} required />
+                    <Input 
+                    label="E-mail" 
+                    id="email" 
+                    value={formLogin.email} 
+                    onChange={handleInput}
+                    required />
+
+                    <Input 
+                    label="Senha" 
+                    type="password" 
+                    id="senha" 
+                    value={formLogin.senha}
+                    onChange={handleInput}
+                    required />
+
                     <button>
                         Entrar
                     </button>
+
                     <div id="lembrarSenha">
                         <p>Lembrar Senha</p>
                         <input type="checkbox" />

@@ -90,7 +90,7 @@ function Cadastrar() {
 
           <div id="arquivos">
             <div id="caixaImagem">
-              <Input label="Imagem" id="imagem" type="file" value={produto.image} handler={handleInputProduto} />
+              <Input label="Imagem" id="image" type="file" value={produto.image} handler={handleInputProduto} />
             </div>
             <button>Upload</button>
           </div>

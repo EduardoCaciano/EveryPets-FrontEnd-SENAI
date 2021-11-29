@@ -31,11 +31,11 @@ function Login() {
                 password: formLogin.senha
             });
 
-            signIn(response.data)
+            signIn(response)
 
             history.push("/agendados");
         } catch (error) {
-            console.log(error.response.data);
+            console.log(error.response);
         }
     }
 

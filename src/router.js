@@ -19,15 +19,15 @@ import { getUser, isSignedIn } from "./services/security";
 
 
 
-function PrivateRoute({ role, children, ...rest }) {
+// function PrivateRoute({ role, children, ...rest }) {
 
-    if (!isSignedIn()) {
-        return <Redirect to="/" />
-    }
-    else{
-        return <Route {...rest}>{children} </Route>;
-    }
-}
+//     if (!isSignedIn()) {
+//         return <Redirect to="/" />
+//     }
+//     else{
+//         return <Route {...rest}>{children} </Route>;
+//     }
+// }
 
 
 function Router() {
@@ -45,37 +45,37 @@ function Router() {
                     <Login />
                 </Route>
                 
-                <PrivateRoute path="/catalogo_produtos">
+                <Route path="/catalogo_produtos">
                     <CatalogoProdutos />
-                </PrivateRoute>
+                </Route>
                 
-                <PrivateRoute path="/cadastro_produto">
+                <Route path="/cadastro_produto">
                     <CadastroProduto />
-                </PrivateRoute>
+                </Route>
 
                 <Route path="/cadastre-se">
                     <Cadastrar />
                 </Route>
                 
-                <PrivateRoute path="/cadastro_servico">
+                <Route path="/cadastro_servico">
                     <CadastroServico />
-                </PrivateRoute>
+                </Route>
 
-                <PrivateRoute path="/solicitacoes">
+                <Route path="/solicitacoes">
                     <Solicitacoes />
-                </PrivateRoute>
+                </Route>
                 
-                <PrivateRoute path="/agendados">
+                <Route path="/agendados">
                     <Agendados />
-                </PrivateRoute>
+                </Route>
                 
-                <PrivateRoute path="/confColaborador">
+                <Route path="/confColaborador">
                     <ConfColaborador />
-                </PrivateRoute>
+                </Route>
                 
-                <PrivateRoute path="/cadastro_colaborador">
+                <Route path="/cadastro_colaborador">
                     <CadastroColaborador />
-                </PrivateRoute>
+                </Route>
 
                 <Route path="/escolhaSegmento">
                     <EscolhaSegmento />

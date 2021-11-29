@@ -32,15 +32,19 @@ function Login() {
                 password: formLogin.senha
             });
 
+
+            signIn(response)
+          
             if(!response){
                 return alert("Usuário ou senha inválidos");
             }
 
             signIn(response.data)
 
+
             history.push("/cadastro_produto");
         } catch (error) {
-            console.log(error.data);
+          console.log(error)
         }
     }
 

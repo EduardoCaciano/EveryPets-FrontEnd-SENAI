@@ -45,13 +45,13 @@ function Router() {
                     <Login />
                 </Route>
                 
-                <PrivateRoute path="/catalogo_produtos">
+                <Route path="/catalogo_produtos">
                     <CatalogoProdutos />
-                </PrivateRoute>
+                </Route>
                 
-                <PrivateRoute path="/cadastro_produto">
+                <Route path="/cadastro_produto">
                     <CadastroProduto />
-                </PrivateRoute>
+                </Route>
 
                 <Route path="/cadastre-se">
                     <Cadastrar />

@@ -14,7 +14,7 @@ function Login() {
 
     const [formLogin, setFormLogin] = useState({
         email: "",
-        senha: ""
+        password: ""
     });
 
     // handle input genérico
@@ -23,19 +23,19 @@ function Login() {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        //e.preventDefault();
 
         try {
             const response = await api.post("/sessionEstablishment", {
                 email: formLogin.email,
-                password: formLogin.senha
+                password: formLogin.password
             });
 
             signIn(response.data)
 
             history.push("/agendados");
         } catch (error) {
-            console.log(error.response.data);
+            console.log(error);
         }
     }
 
@@ -45,7 +45,7 @@ function Login() {
             <Container>
                 <FormContainer onSubmit={handleSubmit}>
                     <Input label="E-mail" id="email" handler={handleInput} required />
-                    <Input label="Senha" type="password" id="senha" handler={handleInput} required />
+                    <Input label="Senha" type="password" id="password" handler={handleInput} required />
                     <button>
                         Entrar
                     </button>

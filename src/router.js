@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import ConfColaborador from "./pages/ConfirmacaoColaborador";
 import CadastroColaborador from "./pages/CadastroColaborador";
 import EscolhaSegmento from "./pages/EscolhaSegmentos";
+import Configuracoes from "./pages/Configuracoes";
 import Home from "./pages/Home";
 import { getUser, isSignedIn } from "./services/security";
 
@@ -79,6 +80,10 @@ function Router() {
 
                 <Route path="/escolhaSegmento">
                     <EscolhaSegmento />
+                </Route>
+                
+                <Route path="/configuracoes">
+                    <Configuracoes />
                 </Route>
 
             </Switch>

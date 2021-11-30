@@ -14,30 +14,38 @@ function Cadastrar() {
 
     const history = useHistory();
 
-    const [formLogin, setFormLogin] = useState({
-        email: "",
-        senha: ""
+    const [servico, setServico] = useState({
+        name: "",
+        value: "",
+        description: "",
+        image: "",
+        id: ""
     });
 
     // handle input genérico
-    const handleInput = (e) => {
-        setFormLogin({ ...formLogin, [e.target.id]: e.target.value });
+    const handleInputServico = (event) => {
+        setServico({ 
+            ...servico,
+            [event.target.id]: event.target.value 
+        });
     }
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async (event) => {
+        event.preventDefault();
 
         try {
-            const response = await api.post("/sessions", {
-                email: formLogin.email,
-                password: formLogin.senha
-            });
+            const {name, value, description} = servico;
 
-            signIn(response.data)
+            if (name === "" || value === "" || description === "") {
+                alert("Preencha todos os campos");
+                return;
+              }
 
-            history.push("/home");
+            const response = await api.post("/service", servico);
+
+            signIn(response.data.token)
         } catch (error) {
-            console.log(error.response.data);
+            console.log(error.message);
         }
     }
 
@@ -52,14 +60,14 @@ function Cadastrar() {
                 </div>
 
                 <FormContainer onSubmit={handleSubmit}>
-                    <Input label="Tipo de Serviços" id="servico" handler={handleInput} required />
-                    <Input label="Valor" id="valor" handler={handleInput} required />
-                    <Input label="Descrição" id="descricao" handler={handleInput} required />
+                    <Input label="Tipo de Serviços" id="name"  handler={handleInputServico} value={servico.name} required />
+                    <Input label="Valor" id="value" handler={handleInputServico} value={servico.value}required />
+                    <Input label="Descrição" id="description" handler={handleInputServico} value={servico.description}required />
                     <div id="arquivos">
                         <div id="caixaImagem">
-                            <Input label="Imagem" id="imagem" type="file" handler={handleInput} required />
+                            <Input label="Imagem" id="image" type="file" handler={handleInputServico} value={servico.image} />
                         </div>
-                            <button>Upload</button>
+                        <button>Upload</button>
                     </div>
 
                     <div id="botoes">

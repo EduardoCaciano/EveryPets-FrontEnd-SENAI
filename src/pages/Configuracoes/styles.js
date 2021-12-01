@@ -4,7 +4,7 @@ export const Configuracoes = styled.header`
   width: 100%;
   height: 92vh;
   justify-content: center;
-  margin-top: 258px;
+  margin-top: 240px;
 
   > header {
     height: 25vh;

@@ -13,14 +13,16 @@ function Header() {
         <div id="profile">
           <img src={profile} />
         </div>
-        <p>Diego | Veterinario</p>
+        <ul class="menu">
+          <li>
+            <a>Eduardo | Veterinario</a>
+            <ul>
+              <li><Link to="/configuracoes">Configurações</Link></li>
+              <li><Link to="/login">Sair</Link></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
-
-      <div id="sair">
-        <Link to="/login">
-          <img src={botaoSair} />
-        </Link>
-      </div>
 
       <nav id="headerCardes">
         <Link to="/catalogo_produtos">
@@ -41,7 +43,7 @@ function Header() {
           </div>
         </Link>
 
-        
+
 
         <Link to="/agendados">
           <div class="cards">

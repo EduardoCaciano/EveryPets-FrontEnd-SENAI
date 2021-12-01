@@ -23,7 +23,7 @@ export const Container = styled.header`
          }
          
          > input {
-            width: inherit;
+            width: 75%;
             height: 35px;
 
             align-items: center;
@@ -40,47 +40,81 @@ export const Container = styled.header`
             width: 50px;
             margin-left: 15px;
             align-items: center;
+            border-radius: 10px 0px 0px 10px;
+            /* border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-bottom: 2px solid black; */
+            /* box-shadow: 3px 2px 10px 10px rgba(0, 0, 0, 0.25); */
+
 
             >img{
                margin-top: 8px;
                height: 40px;
                border-radius: 100%;
+               padding: 3px;
             }
          }
 
 
-         >p{
-            width: 220px;
-            height: 10px;
-            color: white;
-            text-align: left;
-            margin-top: 18px;
-            margin-left: 10px;
-            font-size: 20px;
+         >.menu {
+            list-style: none;
+            border-radius: 0px 10px 10px 0px;
+            float: left;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            /* border-right: 2px solid black;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black; */
+            /* box-shadow: 3px 2px 10px 10px rgba(0, 0, 0, 0.25); */
+
+
+            >li {
+               position: relative;
+               float: left;
+               }
+
+            >li a {
+               color: #333;
+               text-decoration: none;
+               padding: 5px 10px;
+               display: block;
+               font-family: Arial, Helvetica, sans-serif;
+               font-size: 1.2em;
+               border: 1px solid var(--primary);
+               border-radius: 5px;
+               box-shadow: 2px 1px 5px 5px rgba(0, 0, 0, 0.25);
+
+            }
+
+            >li a:hover {
+               background: #333;
+               color: #fff;
+               -moz-box-shadow: 0 3px 10px 0 #CCC;
+               -webkit-box-shadow: 0 3px 10px 0 #ccc;
+               text-shadow: 0px 0px 5px #fff;
+            }
+
+            >li ul {
+               position: absolute;
+               top: 33px;
+               left: 0;
+               background-color: #fff;
+               display: none;
+            }
+
+            >li:hover ul,
+            li.over ul {
+               display: block;
+            }
+
+            >li ul li {
+            border: 1px solid var(--primary);
+            display: block;
+            width: 150px;
          }
-   }
 
-   >#sair{
-      width: 100%;
-      padding-top: 5px;
-
-      >a{
-         >img{
-         height: 28px;
-         width: initial;
-         float: right;
-         border-radius: 5px;
-
-
-         :hover{
-            box-shadow: 0px 10px 10px rgba(0,0,0, 0.25);
-            transform: scale(1.1); 
-            cursor: pointer;
-         }
       }
-      }
-
-
    }
    
    >#headerCardes{
@@ -89,6 +123,7 @@ export const Container = styled.header`
       display: flex;
       background-color: white;
       align-items: center;
+      margin-top: 15px;
 
       >img{
          margin-left: 30px;

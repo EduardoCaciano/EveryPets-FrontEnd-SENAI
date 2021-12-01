@@ -2,6 +2,8 @@ import styled from "styled-components";
 import imgDog from "../../assents/catalogo.png";
 
 export const ContainerCards = styled.header`
+    margin-left: auto;
+    margin-right: auto;
 
         >#cardsProdutos{
             width: 280px;
@@ -9,7 +11,7 @@ export const ContainerCards = styled.header`
             max-width: 250px;
             margin: 25px auto;
             padding: 5px;
-
+            
             >.imagens{
                 height: 200px;
                 width: initial;

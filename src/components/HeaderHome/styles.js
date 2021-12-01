@@ -63,6 +63,7 @@ export const Container = styled.header`
             align-items: center;
             justify-content: center;
             display: flex;
+            margin-left: 5px;
             /* border-right: 2px solid black;
             border-top: 2px solid black;
             border-bottom: 2px solid black; */
@@ -81,14 +82,14 @@ export const Container = styled.header`
                display: block;
                font-family: Arial, Helvetica, sans-serif;
                font-size: 1.2em;
-               border: 1px solid var(--primary);
+               /* border: 1px solid var(--primary); */
                border-radius: 5px;
-               box-shadow: 2px 1px 5px 5px rgba(0, 0, 0, 0.25);
+               box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.1);
 
             }
 
             >li a:hover {
-               background: #333;
+               background: var(--primary);
                color: #fff;
                -moz-box-shadow: 0 3px 10px 0 #CCC;
                -webkit-box-shadow: 0 3px 10px 0 #ccc;

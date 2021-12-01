@@ -54,6 +54,7 @@ export const Configuracoes = styled.header`
       margin-top: 50px;
       font-family: Ropa Sans;
       font-size: 1.8em;
+      color: #767676;
     }
   }
 `;
